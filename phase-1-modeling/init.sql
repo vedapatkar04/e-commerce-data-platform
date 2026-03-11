@@ -49,7 +49,7 @@ CREATE TYPE oltp.order_status AS ENUM (
 
 CREATE TABLE IF NOT EXISTS oltp.orders (
     order_id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    user_id UUID NOT NULL REFERENCES oltp.users(user_id) uuid_generate_v4(),
+    user_id UUID NOT NULL REFERENCES oltp.users(user_id) ON DELETE CASCADE,
     status oltp.order_status NOT NULL DEFAULT 'pending',
     total_amount NUMERIC(10, 2) NOT NULL DEFAULT 0,
     created_at TIMESTAMP NOT NULL DEFAULT NOW(),
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS oltp.order_items (
     product_id UUID NOT NULL REFERENCES oltp.products(product_id) ON DELETE RESTRICT,
     quantity INT NOT NULL CHECK (quantity > 0),
     unit_price NUMERIC(10, 2) NOT NULL,
-    discount NUMERIC(10, 2) DEFAULT 0 CHECK (discount >= 0 AND delivered <= 100)
+    discount NUMERIC(10, 2) DEFAULT 0 CHECK (discount >= 0 AND discount <= 100)
 );
 
 -- Click stream event forr tracking user behaviour
@@ -80,11 +80,11 @@ CREATE TABLE IF NOT EXISTS oltp.clickstream_events (
 );
 
 -- Index
-CREATE INDEX idx_orders_user_id ON oltp.orders(order_id);
-CREATE INDEX idx_orders_created_at ON oltp.orders(created_at);
-CREATE INDEX idx_order_items_order ON oltp.order_items(order_id);
-CREATE INDEX idx_clickstream_user ON oltp.clickstream_events(user_id);
-CREATE INDEX idx_clickstream_event ON oltp.clickstream_events(event_at);
+CREATE INDEX IF NOT EXISTS idx_orders_user_id ON oltp.orders(order_id);
+CREATE INDEX IF NOT EXISTS idx_orders_created_at ON oltp.orders(created_at);
+CREATE INDEX IF NOT EXISTS idx_order_items_order ON oltp.order_items(order_id);
+CREATE INDEX IF NOT EXISTS idx_clickstream_user ON oltp.clickstream_events(user_id);
+CREATE INDEX IF NOT EXISTS idx_clickstream_event ON oltp.clickstream_events(event_at);
 
 -- =============================================================
 -- SCHEMA 2: OLAP (Analytical / Data Warehouse)

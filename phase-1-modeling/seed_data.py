@@ -14,11 +14,11 @@ from faker import Faker
 
 # Config
 DB_CONFIG = {
-    "host": "localhost",
-    "port": 5432,
+    "host": "127.0.0.1",
+    "port": 5433,
     "dbname": "ecommerce_db",
-    "user": "admin",
-    "password": "admin123",
+    "user": "deuser",
+    "password": "depass",
 }
 
 fake = Faker()
