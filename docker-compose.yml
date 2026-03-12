@@ -1,6 +1,6 @@
-version: "3.8"
-
 services:
+
+  # PostgreSQL — source OLTP + warehouse
   postgres:
     image: postgres:15
     container_name: ecommerce_oltp
@@ -9,19 +9,18 @@ services:
       POSTGRES_USER: deuser
       POSTGRES_PASSWORD: depass
       POSTGRES_DB: ecommerce_db
-      POSTGRES_HOST_AUTH_METHOD: trust
     ports:
       - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      - ./phase-1-modeling/init.sql:/docker-entrypoint-initdb.d/init.sql  # auto-runs on first start
+      - ./phase-1-modeling/init.sql:/docker-entrypoint-initdb.d/init.sql
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U deuser -d ecommerce_db"]
       interval: 10s
       timeout: 5s
       retries: 5
 
-  # Optional: pgAdmin UI to inspect your DB visually
+  # pgAdmin — visual DB browser
   pgadmin:
     image: dpage/pgadmin4
     container_name: ecommerce_pgadmin
@@ -31,8 +30,95 @@ services:
       PGADMIN_DEFAULT_PASSWORD: admin123
     ports:
       - "5050:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin   # persists server registrations
     depends_on:
       - postgres
 
+  # Redis — message broker for Airflow
+  redis:
+    image: redis:7
+    container_name: ecommerce_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+
+  # Airflow common config
+  x-airflow-common: &airflow-common
+    image: apache/airflow:2.8.1
+    environment:
+      AIRFLOW__CORE__EXECUTOR: CeleryExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://deuser:depass@postgres/ecommerce_db
+      AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://deuser:depass@postgres/ecommerce_db
+      AIRFLOW__CELERY__BROKER_URL: redis://redis:6379/0
+      AIRFLOW__CORE__FERNET_KEY: 'ZmDfcTF7_60GrrY167zsiPd67pEvs0aGOv2oasOM1Pg='
+      AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+      AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth'
+      AIRFLOW__WEBSERVER__SECRET_KEY: 'ecommerce_secret_key_123'
+      ECOMMERCE_DB_HOST: postgres
+      ECOMMERCE_DB_PORT: 5432
+      ECOMMERCE_DB_NAME: ecommerce_db
+      ECOMMERCE_DB_USER: deuser
+      ECOMMERCE_DB_PASSWORD: depass
+    volumes:
+      - ./phase-2-batch-pipeline/dags:/opt/airflow/dags
+      - ./phase-2-batch-pipeline/etl:/opt/airflow/etl
+      - airflow_logs:/opt/airflow/logs
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+
+  # Airflow Init — runs once to set up DB
+  airflow-init:
+    <<: *airflow-common
+    container_name: ecommerce_airflow_init
+    entrypoint: /bin/bash
+    command:
+      - -c
+      - |
+        airflow db migrate
+        airflow users create \
+          --username admin \
+          --password admin123 \
+          --firstname Admin \
+          --lastname User \
+          --role Admin \
+          --email admin@example.com
+    restart: on-failure
+
+  # Airflow Webserver — UI at localhost:8080
+  airflow-webserver:
+    <<: *airflow-common
+    container_name: ecommerce_airflow_webserver
+    command: webserver
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    depends_on:
+      - airflow-init
+
+  # Airflow Scheduler
+  airflow-scheduler:
+    <<: *airflow-common
+    container_name: ecommerce_airflow_scheduler
+    command: scheduler
+    restart: unless-stopped
+    depends_on:
+      - airflow-init
+
+  # Airflow Worker
+  airflow-worker:
+    <<: *airflow-common
+    container_name: ecommerce_airflow_worker
+    command: celery worker
+    restart: unless-stopped
+    depends_on:
+      - airflow-init
+
 volumes:
   postgres_data:
+  airflow_logs:
+  pgadmin_data:
