@@ -2436,3 +2436,1892 @@ with relation as (
 [0m13:16:35.254769 [debug] [MainThread]: Connection 'ecommerce_db.information_schema' was properly closed.
 [0m13:16:35.255699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7222812a7340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72227d55be20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72227efcff70>]}
 [0m13:16:35.256864 [debug] [MainThread]: Flushing usage events
+[0m13:44:14.303495 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78dbe537f310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78dbe30e9d80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78dbe30e9d20>]}
+
+
+============================== 13:44:14.307525 | 0c75ee27-b968-4a30-84dd-fc65d2576994 ==============================
+[0m13:44:14.307525 [info ] [MainThread]: Running with dbt=1.7.0
+[0m13:44:14.308894 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/usr/app/dbt/logs', 'version_check': 'True', 'profiles_dir': '/root/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m13:44:14.481093 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0c75ee27-b968-4a30-84dd-fc65d2576994', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78dbe30e9db0>]}
+[0m13:44:14.537994 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0c75ee27-b968-4a30-84dd-fc65d2576994', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78dbe186e2c0>]}
+[0m13:44:14.539508 [info ] [MainThread]: Registered adapter: postgres=1.7.0
+[0m13:44:14.551773 [debug] [MainThread]: checksum: 8434eacd4ffdf0ca3ab22bf0e2d55b45306c9599613e842b959405abc489e606, vars: {}, profile: , target: , version: 1.7.0
+[0m13:44:14.770005 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:44:14.771324 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:44:14.777069 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0c75ee27-b968-4a30-84dd-fc65d2576994', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78dbe14801c0>]}
+[0m13:44:14.805503 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0c75ee27-b968-4a30-84dd-fc65d2576994', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78dbe1647040>]}
+[0m13:44:14.806656 [info ] [MainThread]: Found 8 models, 18 tests, 0 sources, 0 exposures, 0 metrics, 401 macros, 0 groups, 0 semantic models
+[0m13:44:14.808054 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0c75ee27-b968-4a30-84dd-fc65d2576994', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78dbe1646e90>]}
+[0m13:44:14.810247 [info ] [MainThread]: 
+[0m13:44:14.811544 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m13:44:14.813939 [debug] [ThreadPool]: Acquiring new postgres connection 'list_ecommerce_db'
+[0m13:44:14.815330 [debug] [ThreadPool]: Acquiring new postgres connection 'list_ecommerce_db'
+[0m13:44:14.816753 [debug] [ThreadPool]: Acquiring new postgres connection 'list_ecommerce_db'
+[0m13:44:14.825321 [debug] [ThreadPool]: Using postgres connection "list_ecommerce_db"
+[0m13:44:14.827348 [debug] [ThreadPool]: Using postgres connection "list_ecommerce_db"
+[0m13:44:14.829268 [debug] [ThreadPool]: Using postgres connection "list_ecommerce_db"
+[0m13:44:14.830109 [debug] [ThreadPool]: On list_ecommerce_db: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "connection_name": "list_ecommerce_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:44:14.831546 [debug] [ThreadPool]: On list_ecommerce_db: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "connection_name": "list_ecommerce_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:44:14.832778 [debug] [ThreadPool]: On list_ecommerce_db: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "connection_name": "list_ecommerce_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:44:14.834019 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:44:14.835366 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:44:14.837075 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:44:14.858503 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.0 seconds
+[0m13:44:14.863383 [debug] [ThreadPool]: On list_ecommerce_db: Close
+[0m13:44:14.867827 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.0 seconds
+[0m13:44:14.870454 [debug] [ThreadPool]: On list_ecommerce_db: Close
+[0m13:44:14.875740 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.0 seconds
+[0m13:44:14.877340 [debug] [ThreadPool]: On list_ecommerce_db: Close
+[0m13:44:14.881051 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_ecommerce_db, now list_ecommerce_db_dbt_dev_staging)
+[0m13:44:14.883502 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_ecommerce_db, now list_ecommerce_db_dbt_dev_intermediate)
+[0m13:44:14.884148 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_ecommerce_db, now list_ecommerce_db_dbt_dev_marts)
+[0m13:44:14.889139 [debug] [ThreadPool]: Using postgres connection "list_ecommerce_db_dbt_dev_staging"
+[0m13:44:14.892310 [debug] [ThreadPool]: Using postgres connection "list_ecommerce_db_dbt_dev_intermediate"
+[0m13:44:14.894842 [debug] [ThreadPool]: Using postgres connection "list_ecommerce_db_dbt_dev_marts"
+[0m13:44:14.895942 [debug] [ThreadPool]: On list_ecommerce_db_dbt_dev_staging: BEGIN
+[0m13:44:14.896821 [debug] [ThreadPool]: On list_ecommerce_db_dbt_dev_intermediate: BEGIN
+[0m13:44:14.897544 [debug] [ThreadPool]: On list_ecommerce_db_dbt_dev_marts: BEGIN
+[0m13:44:14.898329 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:44:14.899001 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:44:14.899951 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:44:14.916163 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:14.917466 [debug] [ThreadPool]: Using postgres connection "list_ecommerce_db_dbt_dev_staging"
+[0m13:44:14.918371 [debug] [ThreadPool]: On list_ecommerce_db_dbt_dev_staging: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "connection_name": "list_ecommerce_db_dbt_dev_staging"} */
+select
+      'ecommerce_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt_dev_staging'
+    union all
+    select
+      'ecommerce_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt_dev_staging'
+    union all
+    select
+      'ecommerce_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dbt_dev_staging'
+  
+[0m13:44:14.919551 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:14.920551 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:14.920862 [debug] [ThreadPool]: Using postgres connection "list_ecommerce_db_dbt_dev_intermediate"
+[0m13:44:14.921937 [debug] [ThreadPool]: Using postgres connection "list_ecommerce_db_dbt_dev_marts"
+[0m13:44:14.922827 [debug] [ThreadPool]: On list_ecommerce_db_dbt_dev_intermediate: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "connection_name": "list_ecommerce_db_dbt_dev_intermediate"} */
+select
+      'ecommerce_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt_dev_intermediate'
+    union all
+    select
+      'ecommerce_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt_dev_intermediate'
+    union all
+    select
+      'ecommerce_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dbt_dev_intermediate'
+  
+[0m13:44:14.923908 [debug] [ThreadPool]: On list_ecommerce_db_dbt_dev_marts: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "connection_name": "list_ecommerce_db_dbt_dev_marts"} */
+select
+      'ecommerce_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt_dev_marts'
+    union all
+    select
+      'ecommerce_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt_dev_marts'
+    union all
+    select
+      'ecommerce_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dbt_dev_marts'
+  
+[0m13:44:14.932407 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.0 seconds
+[0m13:44:14.933031 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.0 seconds
+[0m13:44:14.933387 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.0 seconds
+[0m13:44:14.935315 [debug] [ThreadPool]: On list_ecommerce_db_dbt_dev_staging: ROLLBACK
+[0m13:44:14.936877 [debug] [ThreadPool]: On list_ecommerce_db_dbt_dev_intermediate: ROLLBACK
+[0m13:44:14.938592 [debug] [ThreadPool]: On list_ecommerce_db_dbt_dev_marts: ROLLBACK
+[0m13:44:14.939838 [debug] [ThreadPool]: On list_ecommerce_db_dbt_dev_staging: Close
+[0m13:44:14.940500 [debug] [ThreadPool]: On list_ecommerce_db_dbt_dev_intermediate: Close
+[0m13:44:14.941129 [debug] [ThreadPool]: On list_ecommerce_db_dbt_dev_marts: Close
+[0m13:44:14.950484 [debug] [MainThread]: Using postgres connection "master"
+[0m13:44:14.951511 [debug] [MainThread]: On master: BEGIN
+[0m13:44:14.952533 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:44:14.958726 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:14.959958 [debug] [MainThread]: Using postgres connection "master"
+[0m13:44:14.961307 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m13:44:14.997275 [debug] [MainThread]: SQL status: SELECT 9 in 0.0 seconds
+[0m13:44:15.000163 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0c75ee27-b968-4a30-84dd-fc65d2576994', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78dbe14d1630>]}
+[0m13:44:15.002576 [debug] [MainThread]: On master: ROLLBACK
+[0m13:44:15.005095 [debug] [MainThread]: Using postgres connection "master"
+[0m13:44:15.007963 [debug] [MainThread]: On master: BEGIN
+[0m13:44:15.009404 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:15.010356 [debug] [MainThread]: On master: COMMIT
+[0m13:44:15.011928 [debug] [MainThread]: Using postgres connection "master"
+[0m13:44:15.012649 [debug] [MainThread]: On master: COMMIT
+[0m13:44:15.013616 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m13:44:15.014459 [debug] [MainThread]: On master: Close
+[0m13:44:15.015797 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:44:15.016991 [info ] [MainThread]: 
+[0m13:44:15.023359 [debug] [Thread-1 (]: Began running node model.ecommerce_dbt.stg_clickstream
+[0m13:44:15.024265 [debug] [Thread-2 (]: Began running node model.ecommerce_dbt.stg_orders
+[0m13:44:15.024698 [debug] [Thread-3 (]: Began running node model.ecommerce_dbt.stg_products
+[0m13:44:15.025098 [debug] [Thread-4 (]: Began running node model.ecommerce_dbt.stg_users
+[0m13:44:15.026134 [info ] [Thread-1 (]: 1 of 8 START sql view model dbt_dev_staging.stg_clickstream .................... [RUN]
+[0m13:44:15.027252 [info ] [Thread-2 (]: 2 of 8 START sql view model dbt_dev_staging.stg_orders ......................... [RUN]
+[0m13:44:15.028910 [info ] [Thread-3 (]: 3 of 8 START sql view model dbt_dev_staging.stg_products ....................... [RUN]
+[0m13:44:15.031054 [info ] [Thread-4 (]: 4 of 8 START sql view model dbt_dev_staging.stg_users .......................... [RUN]
+[0m13:44:15.033399 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_ecommerce_db_dbt_dev_marts, now model.ecommerce_dbt.stg_clickstream)
+[0m13:44:15.034993 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_ecommerce_db_dbt_dev_intermediate, now model.ecommerce_dbt.stg_orders)
+[0m13:44:15.036659 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_ecommerce_db_dbt_dev_staging, now model.ecommerce_dbt.stg_products)
+[0m13:44:15.038586 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.ecommerce_dbt.stg_users'
+[0m13:44:15.040120 [debug] [Thread-1 (]: Began compiling node model.ecommerce_dbt.stg_clickstream
+[0m13:44:15.041213 [debug] [Thread-2 (]: Began compiling node model.ecommerce_dbt.stg_orders
+[0m13:44:15.042560 [debug] [Thread-3 (]: Began compiling node model.ecommerce_dbt.stg_products
+[0m13:44:15.043622 [debug] [Thread-4 (]: Began compiling node model.ecommerce_dbt.stg_users
+[0m13:44:15.051113 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_dbt.stg_clickstream"
+[0m13:44:15.052942 [debug] [Thread-2 (]: Writing injected SQL for node "model.ecommerce_dbt.stg_orders"
+[0m13:44:15.057836 [debug] [Thread-3 (]: Writing injected SQL for node "model.ecommerce_dbt.stg_products"
+[0m13:44:15.060875 [debug] [Thread-4 (]: Writing injected SQL for node "model.ecommerce_dbt.stg_users"
+[0m13:44:15.068998 [debug] [Thread-2 (]: Timing info for model.ecommerce_dbt.stg_orders (compile): 13:44:15.051924 => 13:44:15.068383
+[0m13:44:15.071334 [debug] [Thread-4 (]: Timing info for model.ecommerce_dbt.stg_users (compile): 13:44:15.059216 => 13:44:15.071013
+[0m13:44:15.071954 [debug] [Thread-1 (]: Timing info for model.ecommerce_dbt.stg_clickstream (compile): 13:44:15.044755 => 13:44:15.071623
+[0m13:44:15.072454 [debug] [Thread-2 (]: Began executing node model.ecommerce_dbt.stg_orders
+[0m13:44:15.073945 [debug] [Thread-4 (]: Began executing node model.ecommerce_dbt.stg_users
+[0m13:44:15.075182 [debug] [Thread-3 (]: Timing info for model.ecommerce_dbt.stg_products (compile): 13:44:15.054013 => 13:44:15.074844
+[0m13:44:15.075701 [debug] [Thread-1 (]: Began executing node model.ecommerce_dbt.stg_clickstream
+[0m13:44:15.106350 [debug] [Thread-2 (]: Writing runtime sql for node "model.ecommerce_dbt.stg_orders"
+[0m13:44:15.109970 [debug] [Thread-4 (]: Writing runtime sql for node "model.ecommerce_dbt.stg_users"
+[0m13:44:15.111273 [debug] [Thread-3 (]: Began executing node model.ecommerce_dbt.stg_products
+[0m13:44:15.116280 [debug] [Thread-1 (]: Writing runtime sql for node "model.ecommerce_dbt.stg_clickstream"
+[0m13:44:15.123156 [debug] [Thread-3 (]: Writing runtime sql for node "model.ecommerce_dbt.stg_products"
+[0m13:44:15.131288 [debug] [Thread-4 (]: Using postgres connection "model.ecommerce_dbt.stg_users"
+[0m13:44:15.131887 [debug] [Thread-2 (]: Using postgres connection "model.ecommerce_dbt.stg_orders"
+[0m13:44:15.132413 [debug] [Thread-1 (]: Using postgres connection "model.ecommerce_dbt.stg_clickstream"
+[0m13:44:15.133351 [debug] [Thread-4 (]: On model.ecommerce_dbt.stg_users: BEGIN
+[0m13:44:15.134274 [debug] [Thread-2 (]: On model.ecommerce_dbt.stg_orders: BEGIN
+[0m13:44:15.134596 [debug] [Thread-3 (]: Using postgres connection "model.ecommerce_dbt.stg_products"
+[0m13:44:15.135480 [debug] [Thread-1 (]: On model.ecommerce_dbt.stg_clickstream: BEGIN
+[0m13:44:15.136877 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m13:44:15.138113 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:44:15.139134 [debug] [Thread-3 (]: On model.ecommerce_dbt.stg_products: BEGIN
+[0m13:44:15.140134 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:44:15.145103 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m13:44:15.149575 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:15.150166 [debug] [Thread-4 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:15.152644 [debug] [Thread-2 (]: Using postgres connection "model.ecommerce_dbt.stg_orders"
+[0m13:44:15.153925 [debug] [Thread-4 (]: Using postgres connection "model.ecommerce_dbt.stg_users"
+[0m13:44:15.155259 [debug] [Thread-2 (]: On model.ecommerce_dbt.stg_orders: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.stg_orders"} */
+
+  create view "ecommerce_db"."dbt_dev_staging"."stg_orders__dbt_tmp"
+    
+    
+  as (
+    -- Staging model: stg_orders
+-- File: models/staging/stg_orders.sql
+--
+-- Purpose: Clean raw orders, join with order_items
+-- Grain: one row per order line item
+
+WITH orders AS (
+    SELECT * FROM oltp.orders
+),
+
+order_items AS (
+    SELECT * FROM oltp.order_items
+),
+
+joined AS (
+    SELECT
+        o.order_id::VARCHAR        AS order_id,
+        o.user_id::VARCHAR         AS user_id,
+        o.status                   AS order_status,
+        o.created_at               AS ordered_at,
+        o.shipped_at,
+        oi.product_id::VARCHAR     AS product_id,
+        oi.quantity,
+        oi.unit_price,
+        oi.discount,
+
+        -- Calculate line item revenue
+        ROUND(
+            (oi.unit_price * oi.quantity) * (1 - oi.discount / 100), 2
+        )                          AS line_revenue,
+
+        -- Derived: days to ship
+        CASE
+            WHEN o.shipped_at IS NOT NULL
+            THEN (o.shipped_at::DATE - o.created_at::DATE)
+            ELSE NULL
+        END                        AS days_to_ship
+
+    FROM orders o
+    JOIN order_items oi ON o.order_id = oi.order_id
+)
+
+SELECT * FROM joined
+  );
+[0m13:44:15.156534 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:15.157013 [debug] [Thread-4 (]: On model.ecommerce_dbt.stg_users: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.stg_users"} */
+
+  create view "ecommerce_db"."dbt_dev_staging"."stg_users__dbt_tmp"
+    
+    
+  as (
+    -- Staging model: stg_users
+-- File: models/staging/stg_users.sql
+--
+-- Purpose: Clean and standardize raw users from OLTP
+-- Rule: Staging models NEVER join tables — one source per model
+-- Materialized as: VIEW (always fresh, no storage cost)
+
+WITH source AS (
+    SELECT * FROM oltp.users
+),
+
+cleaned AS (
+    SELECT
+        user_id::VARCHAR           AS user_id,
+        TRIM(full_name)            AS full_name,
+        TRIM(LOWER(email))         AS email,           -- normalize email
+        INITCAP(TRIM(country))     AS country,         -- normalize country casing
+        created_at::DATE           AS registered_at,
+        is_active,
+
+        -- Derived: days since registration
+        CURRENT_DATE - created_at::DATE AS days_since_registered
+
+    FROM source
+    WHERE full_name IS NOT NULL    -- basic data quality filter
+)
+
+SELECT * FROM cleaned
+  );
+[0m13:44:15.157835 [debug] [Thread-3 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:15.159548 [debug] [Thread-1 (]: Using postgres connection "model.ecommerce_dbt.stg_clickstream"
+[0m13:44:15.161802 [debug] [Thread-3 (]: Using postgres connection "model.ecommerce_dbt.stg_products"
+[0m13:44:15.163224 [debug] [Thread-1 (]: On model.ecommerce_dbt.stg_clickstream: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.stg_clickstream"} */
+
+  create view "ecommerce_db"."dbt_dev_staging"."stg_clickstream__dbt_tmp"
+    
+    
+  as (
+    -- Staging model: stg_clickstream
+-- File: models/staging/stg_clickstream.sql
+
+WITH source AS (
+    SELECT
+        event_id::VARCHAR          AS event_id,
+        user_id::VARCHAR           AS user_id,
+        product_id::VARCHAR        AS product_id,
+        event_type,
+        session_id::VARCHAR        AS session_id,
+        event_at,
+        DATE(event_at)             AS event_date,
+        EXTRACT(HOUR FROM event_at)AS event_hour
+    FROM oltp.clickstream_events
+)
+
+SELECT * FROM source
+  );
+[0m13:44:15.164784 [debug] [Thread-3 (]: On model.ecommerce_dbt.stg_products: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.stg_products"} */
+
+  create view "ecommerce_db"."dbt_dev_staging"."stg_products__dbt_tmp"
+    
+    
+  as (
+    -- Staging model: stg_products
+-- File: models/staging/stg_products.sql
+
+WITH source AS (
+    SELECT
+        p.product_id::VARCHAR      AS product_id,
+        TRIM(p.name)               AS product_name,
+        p.price,
+        p.stock_qty,
+        c.name                     AS category_name,
+        p.created_at,
+
+        -- Derived: price band
+        CASE
+            WHEN p.price < 30   THEN 'budget'
+            WHEN p.price < 150  THEN 'mid'
+            ELSE                     'premium'
+        END                        AS price_band
+
+    FROM oltp.products p
+    LEFT JOIN oltp.categories c ON p.category_id = c.category_id
+)
+
+SELECT * FROM source
+  );
+[0m13:44:15.169098 [debug] [Thread-4 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m13:44:15.170323 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m13:44:15.174951 [debug] [Thread-4 (]: Using postgres connection "model.ecommerce_dbt.stg_users"
+[0m13:44:15.175444 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m13:44:15.178290 [debug] [Thread-3 (]: Using postgres connection "model.ecommerce_dbt.stg_products"
+[0m13:44:15.179186 [debug] [Thread-4 (]: On model.ecommerce_dbt.stg_users: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.stg_users"} */
+alter table "ecommerce_db"."dbt_dev_staging"."stg_users" rename to "stg_users__dbt_backup"
+[0m13:44:15.236910 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m13:44:15.238510 [debug] [Thread-2 (]: Using postgres connection "model.ecommerce_dbt.stg_orders"
+[0m13:44:15.239477 [debug] [Thread-3 (]: On model.ecommerce_dbt.stg_products: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.stg_products"} */
+alter table "ecommerce_db"."dbt_dev_staging"."stg_products" rename to "stg_products__dbt_backup"
+[0m13:44:15.241509 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:44:15.243761 [debug] [Thread-1 (]: Using postgres connection "model.ecommerce_dbt.stg_clickstream"
+[0m13:44:15.244859 [debug] [Thread-2 (]: On model.ecommerce_dbt.stg_orders: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.stg_orders"} */
+alter table "ecommerce_db"."dbt_dev_staging"."stg_orders" rename to "stg_orders__dbt_backup"
+[0m13:44:15.249375 [debug] [Thread-4 (]: Using postgres connection "model.ecommerce_dbt.stg_users"
+[0m13:44:15.249749 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:44:15.250826 [debug] [Thread-1 (]: On model.ecommerce_dbt.stg_clickstream: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.stg_clickstream"} */
+alter table "ecommerce_db"."dbt_dev_staging"."stg_clickstream" rename to "stg_clickstream__dbt_backup"
+[0m13:44:15.252561 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:44:15.252830 [debug] [Thread-4 (]: On model.ecommerce_dbt.stg_users: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.stg_users"} */
+alter table "ecommerce_db"."dbt_dev_staging"."stg_users__dbt_tmp" rename to "stg_users"
+[0m13:44:15.255290 [debug] [Thread-3 (]: Using postgres connection "model.ecommerce_dbt.stg_products"
+[0m13:44:15.256893 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:44:15.261558 [debug] [Thread-2 (]: Using postgres connection "model.ecommerce_dbt.stg_orders"
+[0m13:44:15.263230 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:44:15.263558 [debug] [Thread-3 (]: On model.ecommerce_dbt.stg_products: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.stg_products"} */
+alter table "ecommerce_db"."dbt_dev_staging"."stg_products__dbt_tmp" rename to "stg_products"
+[0m13:44:15.267796 [debug] [Thread-1 (]: Using postgres connection "model.ecommerce_dbt.stg_clickstream"
+[0m13:44:15.269022 [debug] [Thread-2 (]: On model.ecommerce_dbt.stg_orders: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.stg_orders"} */
+alter table "ecommerce_db"."dbt_dev_staging"."stg_orders__dbt_tmp" rename to "stg_orders"
+[0m13:44:15.297002 [debug] [Thread-4 (]: On model.ecommerce_dbt.stg_users: COMMIT
+[0m13:44:15.298088 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:44:15.298685 [debug] [Thread-1 (]: On model.ecommerce_dbt.stg_clickstream: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.stg_clickstream"} */
+alter table "ecommerce_db"."dbt_dev_staging"."stg_clickstream__dbt_tmp" rename to "stg_clickstream"
+[0m13:44:15.300129 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:44:15.300918 [debug] [Thread-4 (]: Using postgres connection "model.ecommerce_dbt.stg_users"
+[0m13:44:15.303354 [debug] [Thread-3 (]: On model.ecommerce_dbt.stg_products: COMMIT
+[0m13:44:15.305030 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:44:15.306444 [debug] [Thread-2 (]: On model.ecommerce_dbt.stg_orders: COMMIT
+[0m13:44:15.307268 [debug] [Thread-4 (]: On model.ecommerce_dbt.stg_users: COMMIT
+[0m13:44:15.308164 [debug] [Thread-3 (]: Using postgres connection "model.ecommerce_dbt.stg_products"
+[0m13:44:15.312378 [debug] [Thread-1 (]: On model.ecommerce_dbt.stg_clickstream: COMMIT
+[0m13:44:15.313413 [debug] [Thread-2 (]: Using postgres connection "model.ecommerce_dbt.stg_orders"
+[0m13:44:15.315206 [debug] [Thread-3 (]: On model.ecommerce_dbt.stg_products: COMMIT
+[0m13:44:15.315890 [debug] [Thread-4 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:44:15.316690 [debug] [Thread-1 (]: Using postgres connection "model.ecommerce_dbt.stg_clickstream"
+[0m13:44:15.317614 [debug] [Thread-2 (]: On model.ecommerce_dbt.stg_orders: COMMIT
+[0m13:44:15.324620 [debug] [Thread-3 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:44:15.325049 [debug] [Thread-4 (]: Applying DROP to: "ecommerce_db"."dbt_dev_staging"."stg_users__dbt_backup"
+[0m13:44:15.327547 [debug] [Thread-1 (]: On model.ecommerce_dbt.stg_clickstream: COMMIT
+[0m13:44:15.333739 [debug] [Thread-3 (]: Applying DROP to: "ecommerce_db"."dbt_dev_staging"."stg_products__dbt_backup"
+[0m13:44:15.334156 [debug] [Thread-2 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:44:15.339329 [debug] [Thread-4 (]: Using postgres connection "model.ecommerce_dbt.stg_users"
+[0m13:44:15.341929 [debug] [Thread-3 (]: Using postgres connection "model.ecommerce_dbt.stg_products"
+[0m13:44:15.342299 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:44:15.345318 [debug] [Thread-2 (]: Applying DROP to: "ecommerce_db"."dbt_dev_staging"."stg_orders__dbt_backup"
+[0m13:44:15.346289 [debug] [Thread-4 (]: On model.ecommerce_dbt.stg_users: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.stg_users"} */
+drop view if exists "ecommerce_db"."dbt_dev_staging"."stg_users__dbt_backup" cascade
+[0m13:44:15.347239 [debug] [Thread-3 (]: On model.ecommerce_dbt.stg_products: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.stg_products"} */
+drop view if exists "ecommerce_db"."dbt_dev_staging"."stg_products__dbt_backup" cascade
+[0m13:44:15.349539 [debug] [Thread-1 (]: Applying DROP to: "ecommerce_db"."dbt_dev_staging"."stg_clickstream__dbt_backup"
+[0m13:44:15.351050 [debug] [Thread-2 (]: Using postgres connection "model.ecommerce_dbt.stg_orders"
+[0m13:44:15.354151 [debug] [Thread-1 (]: Using postgres connection "model.ecommerce_dbt.stg_clickstream"
+[0m13:44:15.354914 [debug] [Thread-2 (]: On model.ecommerce_dbt.stg_orders: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.stg_orders"} */
+drop view if exists "ecommerce_db"."dbt_dev_staging"."stg_orders__dbt_backup" cascade
+[0m13:44:15.356031 [debug] [Thread-1 (]: On model.ecommerce_dbt.stg_clickstream: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.stg_clickstream"} */
+drop view if exists "ecommerce_db"."dbt_dev_staging"."stg_clickstream__dbt_backup" cascade
+[0m13:44:15.362411 [debug] [Thread-4 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m13:44:15.363016 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m13:44:15.365299 [debug] [Thread-4 (]: Timing info for model.ecommerce_dbt.stg_users (execute): 13:44:15.106698 => 13:44:15.365057
+[0m13:44:15.365821 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m13:44:15.366206 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m13:44:15.368354 [debug] [Thread-1 (]: Timing info for model.ecommerce_dbt.stg_clickstream (execute): 13:44:15.112360 => 13:44:15.368116
+[0m13:44:15.369394 [debug] [Thread-4 (]: On model.ecommerce_dbt.stg_users: Close
+[0m13:44:15.371498 [debug] [Thread-2 (]: Timing info for model.ecommerce_dbt.stg_orders (execute): 13:44:15.076731 => 13:44:15.371295
+[0m13:44:15.373253 [debug] [Thread-3 (]: Timing info for model.ecommerce_dbt.stg_products (execute): 13:44:15.119099 => 13:44:15.373145
+[0m13:44:15.374119 [debug] [Thread-1 (]: On model.ecommerce_dbt.stg_clickstream: Close
+[0m13:44:15.375197 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0c75ee27-b968-4a30-84dd-fc65d2576994', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78dbe14d62f0>]}
+[0m13:44:15.375831 [debug] [Thread-2 (]: On model.ecommerce_dbt.stg_orders: Close
+[0m13:44:15.376604 [debug] [Thread-3 (]: On model.ecommerce_dbt.stg_products: Close
+[0m13:44:15.377770 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0c75ee27-b968-4a30-84dd-fc65d2576994', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78dbe14d6290>]}
+[0m13:44:15.379033 [info ] [Thread-4 (]: 4 of 8 OK created sql view model dbt_dev_staging.stg_users ..................... [[32mCREATE VIEW[0m in 0.34s]
+[0m13:44:15.380491 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0c75ee27-b968-4a30-84dd-fc65d2576994', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78dbe15420e0>]}
+[0m13:44:15.381797 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0c75ee27-b968-4a30-84dd-fc65d2576994', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78dbe14d1120>]}
+[0m13:44:15.383110 [info ] [Thread-1 (]: 1 of 8 OK created sql view model dbt_dev_staging.stg_clickstream ............... [[32mCREATE VIEW[0m in 0.34s]
+[0m13:44:15.384508 [debug] [Thread-4 (]: Finished running node model.ecommerce_dbt.stg_users
+[0m13:44:15.385614 [info ] [Thread-2 (]: 2 of 8 OK created sql view model dbt_dev_staging.stg_orders .................... [[32mCREATE VIEW[0m in 0.35s]
+[0m13:44:15.387009 [info ] [Thread-3 (]: 3 of 8 OK created sql view model dbt_dev_staging.stg_products .................. [[32mCREATE VIEW[0m in 0.35s]
+[0m13:44:15.388680 [debug] [Thread-1 (]: Finished running node model.ecommerce_dbt.stg_clickstream
+[0m13:44:15.391114 [debug] [Thread-2 (]: Finished running node model.ecommerce_dbt.stg_orders
+[0m13:44:15.392391 [debug] [Thread-3 (]: Finished running node model.ecommerce_dbt.stg_products
+[0m13:44:15.394004 [debug] [Thread-4 (]: Began running node model.ecommerce_dbt.mart_funnel
+[0m13:44:15.396164 [debug] [Thread-1 (]: Began running node model.ecommerce_dbt.int_order_items_enriched
+[0m13:44:15.397032 [info ] [Thread-4 (]: 5 of 8 START sql table model dbt_dev_marts.mart_funnel ......................... [RUN]
+[0m13:44:15.398395 [info ] [Thread-1 (]: 6 of 8 START sql view model dbt_dev_intermediate.int_order_items_enriched ...... [RUN]
+[0m13:44:15.400117 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.ecommerce_dbt.stg_users, now model.ecommerce_dbt.mart_funnel)
+[0m13:44:15.401537 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ecommerce_dbt.stg_clickstream, now model.ecommerce_dbt.int_order_items_enriched)
+[0m13:44:15.403315 [debug] [Thread-4 (]: Began compiling node model.ecommerce_dbt.mart_funnel
+[0m13:44:15.404544 [debug] [Thread-1 (]: Began compiling node model.ecommerce_dbt.int_order_items_enriched
+[0m13:44:15.408963 [debug] [Thread-4 (]: Writing injected SQL for node "model.ecommerce_dbt.mart_funnel"
+[0m13:44:15.412061 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_dbt.int_order_items_enriched"
+[0m13:44:15.422329 [debug] [Thread-1 (]: Timing info for model.ecommerce_dbt.int_order_items_enriched (compile): 13:44:15.409921 => 13:44:15.421879
+[0m13:44:15.422904 [debug] [Thread-4 (]: Timing info for model.ecommerce_dbt.mart_funnel (compile): 13:44:15.405492 => 13:44:15.422640
+[0m13:44:15.423940 [debug] [Thread-1 (]: Began executing node model.ecommerce_dbt.int_order_items_enriched
+[0m13:44:15.425165 [debug] [Thread-4 (]: Began executing node model.ecommerce_dbt.mart_funnel
+[0m13:44:15.430081 [debug] [Thread-1 (]: Writing runtime sql for node "model.ecommerce_dbt.int_order_items_enriched"
+[0m13:44:15.458224 [debug] [Thread-4 (]: Writing runtime sql for node "model.ecommerce_dbt.mart_funnel"
+[0m13:44:15.465008 [debug] [Thread-1 (]: Using postgres connection "model.ecommerce_dbt.int_order_items_enriched"
+[0m13:44:15.465514 [debug] [Thread-4 (]: Using postgres connection "model.ecommerce_dbt.mart_funnel"
+[0m13:44:15.466338 [debug] [Thread-1 (]: On model.ecommerce_dbt.int_order_items_enriched: BEGIN
+[0m13:44:15.467406 [debug] [Thread-4 (]: On model.ecommerce_dbt.mart_funnel: BEGIN
+[0m13:44:15.468253 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:44:15.469066 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m13:44:15.478190 [debug] [Thread-4 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:15.479461 [debug] [Thread-4 (]: Using postgres connection "model.ecommerce_dbt.mart_funnel"
+[0m13:44:15.480624 [debug] [Thread-4 (]: On model.ecommerce_dbt.mart_funnel: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.mart_funnel"} */
+
+  
+    
+
+  create  table "ecommerce_db"."dbt_dev_marts"."mart_funnel__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- Mart model: mart_funnel
+-- File: models/marts/mart_funnel.sql
+--
+-- Purpose: Clickstream funnel analysis
+-- Shows drop-off at each stage of the user journey
+-- Key business question: where are users abandoning?
+
+WITH clickstream AS (
+    SELECT * FROM "ecommerce_db"."dbt_dev_staging"."stg_clickstream"
+),
+
+daily_funnel AS (
+    SELECT
+        event_date,
+        event_type,
+        COUNT(*)                        AS event_count,
+        COUNT(DISTINCT user_id)         AS unique_users,
+        COUNT(DISTINCT session_id)      AS unique_sessions
+    FROM clickstream
+    GROUP BY 1, 2
+),
+
+-- Pivot funnel stages into columns for easy analysis
+funnel_summary AS (
+    SELECT
+        event_date,
+        SUM(CASE WHEN event_type = 'page_view'        THEN unique_users ELSE 0 END) AS page_views,
+        SUM(CASE WHEN event_type = 'product_view'     THEN unique_users ELSE 0 END) AS product_views,
+        SUM(CASE WHEN event_type = 'add_to_cart'      THEN unique_users ELSE 0 END) AS add_to_carts,
+        SUM(CASE WHEN event_type = 'checkout'         THEN unique_users ELSE 0 END) AS checkouts,
+        SUM(CASE WHEN event_type = 'purchase'         THEN unique_users ELSE 0 END) AS purchases,
+
+        -- Conversion rates between stages
+        ROUND(
+            100.0 * SUM(CASE WHEN event_type = 'product_view' THEN unique_users ELSE 0 END)
+            / NULLIF(SUM(CASE WHEN event_type = 'page_view' THEN unique_users ELSE 0 END), 0)
+        , 2)                           AS page_to_product_pct,
+
+        ROUND(
+            100.0 * SUM(CASE WHEN event_type = 'add_to_cart' THEN unique_users ELSE 0 END)
+            / NULLIF(SUM(CASE WHEN event_type = 'product_view' THEN unique_users ELSE 0 END), 0)
+        , 2)                           AS product_to_cart_pct,
+
+        ROUND(
+            100.0 * SUM(CASE WHEN event_type = 'purchase' THEN unique_users ELSE 0 END)
+            / NULLIF(SUM(CASE WHEN event_type = 'add_to_cart' THEN unique_users ELSE 0 END), 0)
+        , 2)                           AS cart_to_purchase_pct
+
+    FROM daily_funnel
+    GROUP BY event_date
+)
+
+SELECT * FROM funnel_summary
+ORDER BY event_date DESC
+  );
+  
+[0m13:44:15.494362 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:15.495975 [debug] [Thread-1 (]: Using postgres connection "model.ecommerce_dbt.int_order_items_enriched"
+[0m13:44:15.497656 [debug] [Thread-1 (]: On model.ecommerce_dbt.int_order_items_enriched: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.int_order_items_enriched"} */
+
+  create view "ecommerce_db"."dbt_dev_intermediate"."int_order_items_enriched__dbt_tmp"
+    
+    
+  as (
+    -- Intermediate model: int_order_items_enriched
+-- File: models/intermediate/int_order_items_enriched.sql
+--
+-- Purpose: Join orders with user and product context
+-- This is where we combine staging models into one enriched dataset
+-- Mart models will query THIS instead of joining everything themselves
+--
+-- Key concept: ref() function
+-- ref('stg_orders') tells dbt to depend on stg_orders model
+-- dbt builds stg_orders BEFORE this model automatically
+
+WITH orders AS (
+    -- ref() creates dependency — dbt runs stg_orders first
+    SELECT * FROM "ecommerce_db"."dbt_dev_staging"."stg_orders"
+),
+
+users AS (
+    SELECT * FROM "ecommerce_db"."dbt_dev_staging"."stg_users"
+),
+
+products AS (
+    SELECT * FROM "ecommerce_db"."dbt_dev_staging"."stg_products"
+),
+
+enriched AS (
+    SELECT
+        -- Order details
+        o.order_id,
+        o.order_status,
+        o.ordered_at,
+        o.days_to_ship,
+        o.quantity,
+        o.unit_price,
+        o.discount,
+        o.line_revenue,
+
+        -- User context (denormalized in)
+        u.user_id,
+        u.full_name         AS customer_name,
+        u.country,
+        u.registered_at,
+        u.days_since_registered,
+
+        -- Product context (denormalized in)
+        p.product_id,
+        p.product_name,
+        p.category_name,
+        p.price_band,
+
+        -- Date dimensions for grouping
+        DATE(o.ordered_at)                    AS order_date,
+        EXTRACT(YEAR  FROM o.ordered_at)::INT AS order_year,
+        EXTRACT(MONTH FROM o.ordered_at)::INT AS order_month,
+        TO_CHAR(o.ordered_at, 'Month')        AS order_month_name,
+        EXTRACT(DOW   FROM o.ordered_at)::INT AS order_day_of_week
+
+    FROM orders o
+    LEFT JOIN users    u ON o.user_id    = u.user_id
+    LEFT JOIN products p ON o.product_id = p.product_id
+)
+
+SELECT * FROM enriched
+  );
+[0m13:44:15.510166 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m13:44:15.515586 [debug] [Thread-1 (]: Using postgres connection "model.ecommerce_dbt.int_order_items_enriched"
+[0m13:44:15.516796 [debug] [Thread-1 (]: On model.ecommerce_dbt.int_order_items_enriched: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.int_order_items_enriched"} */
+alter table "ecommerce_db"."dbt_dev_intermediate"."int_order_items_enriched__dbt_tmp" rename to "int_order_items_enriched"
+[0m13:44:15.518865 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:44:15.521557 [debug] [Thread-1 (]: On model.ecommerce_dbt.int_order_items_enriched: COMMIT
+[0m13:44:15.522835 [debug] [Thread-1 (]: Using postgres connection "model.ecommerce_dbt.int_order_items_enriched"
+[0m13:44:15.524119 [debug] [Thread-1 (]: On model.ecommerce_dbt.int_order_items_enriched: COMMIT
+[0m13:44:15.527296 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:44:15.531253 [debug] [Thread-1 (]: Applying DROP to: "ecommerce_db"."dbt_dev_intermediate"."int_order_items_enriched__dbt_backup"
+[0m13:44:15.533085 [debug] [Thread-1 (]: Using postgres connection "model.ecommerce_dbt.int_order_items_enriched"
+[0m13:44:15.534130 [debug] [Thread-1 (]: On model.ecommerce_dbt.int_order_items_enriched: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.int_order_items_enriched"} */
+drop view if exists "ecommerce_db"."dbt_dev_intermediate"."int_order_items_enriched__dbt_backup" cascade
+[0m13:44:15.535783 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m13:44:15.538863 [debug] [Thread-1 (]: Timing info for model.ecommerce_dbt.int_order_items_enriched (execute): 13:44:15.426067 => 13:44:15.538688
+[0m13:44:15.540179 [debug] [Thread-1 (]: On model.ecommerce_dbt.int_order_items_enriched: Close
+[0m13:44:15.541909 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0c75ee27-b968-4a30-84dd-fc65d2576994', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78dbe17ff160>]}
+[0m13:44:15.543389 [info ] [Thread-1 (]: 6 of 8 OK created sql view model dbt_dev_intermediate.int_order_items_enriched . [[32mCREATE VIEW[0m in 0.14s]
+[0m13:44:15.545033 [debug] [Thread-1 (]: Finished running node model.ecommerce_dbt.int_order_items_enriched
+[0m13:44:15.546480 [debug] [Thread-3 (]: Began running node model.ecommerce_dbt.mart_revenue
+[0m13:44:15.546923 [debug] [Thread-2 (]: Began running node model.ecommerce_dbt.mart_top_products
+[0m13:44:15.548021 [info ] [Thread-3 (]: 7 of 8 START sql table model dbt_dev_marts.mart_revenue ........................ [RUN]
+[0m13:44:15.549282 [info ] [Thread-2 (]: 8 of 8 START sql table model dbt_dev_marts.mart_top_products ................... [RUN]
+[0m13:44:15.550809 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.ecommerce_dbt.stg_products, now model.ecommerce_dbt.mart_revenue)
+[0m13:44:15.552554 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.ecommerce_dbt.stg_orders, now model.ecommerce_dbt.mart_top_products)
+[0m13:44:15.553775 [debug] [Thread-3 (]: Began compiling node model.ecommerce_dbt.mart_revenue
+[0m13:44:15.555132 [debug] [Thread-2 (]: Began compiling node model.ecommerce_dbt.mart_top_products
+[0m13:44:15.559986 [debug] [Thread-3 (]: Writing injected SQL for node "model.ecommerce_dbt.mart_revenue"
+[0m13:44:15.564258 [debug] [Thread-2 (]: Writing injected SQL for node "model.ecommerce_dbt.mart_top_products"
+[0m13:44:15.571919 [debug] [Thread-3 (]: Timing info for model.ecommerce_dbt.mart_revenue (compile): 13:44:15.556325 => 13:44:15.571380
+[0m13:44:15.572497 [debug] [Thread-2 (]: Timing info for model.ecommerce_dbt.mart_top_products (compile): 13:44:15.561298 => 13:44:15.572278
+[0m13:44:15.573416 [debug] [Thread-3 (]: Began executing node model.ecommerce_dbt.mart_revenue
+[0m13:44:15.574712 [debug] [Thread-2 (]: Began executing node model.ecommerce_dbt.mart_top_products
+[0m13:44:15.582020 [debug] [Thread-3 (]: Writing runtime sql for node "model.ecommerce_dbt.mart_revenue"
+[0m13:44:15.587611 [debug] [Thread-2 (]: Writing runtime sql for node "model.ecommerce_dbt.mart_top_products"
+[0m13:44:15.595066 [debug] [Thread-3 (]: Using postgres connection "model.ecommerce_dbt.mart_revenue"
+[0m13:44:15.596158 [debug] [Thread-2 (]: Using postgres connection "model.ecommerce_dbt.mart_top_products"
+[0m13:44:15.596603 [debug] [Thread-3 (]: On model.ecommerce_dbt.mart_revenue: BEGIN
+[0m13:44:15.598907 [debug] [Thread-2 (]: On model.ecommerce_dbt.mart_top_products: BEGIN
+[0m13:44:15.600277 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m13:44:15.601571 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:44:15.610571 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:15.611188 [debug] [Thread-3 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:15.612255 [debug] [Thread-2 (]: Using postgres connection "model.ecommerce_dbt.mart_top_products"
+[0m13:44:15.613579 [debug] [Thread-3 (]: Using postgres connection "model.ecommerce_dbt.mart_revenue"
+[0m13:44:15.614719 [debug] [Thread-2 (]: On model.ecommerce_dbt.mart_top_products: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.mart_top_products"} */
+
+  
+    
+
+  create  table "ecommerce_db"."dbt_dev_marts"."mart_top_products__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- Mart model: mart_top_products
+-- File: models/marts/mart_top_products.sql
+--
+-- Purpose: Product performance analytics
+-- Answers: what are our best and worst performing products?
+
+WITH enriched AS (
+    SELECT * FROM "ecommerce_db"."dbt_dev_intermediate"."int_order_items_enriched"
+    WHERE order_status = 'delivered'
+),
+
+product_stats AS (
+    SELECT
+        product_id,
+        product_name,
+        category_name,
+        price_band,
+
+        COUNT(DISTINCT order_id)            AS total_orders,
+        SUM(quantity)                       AS total_units_sold,
+        ROUND(SUM(line_revenue)::NUMERIC, 2)AS total_revenue,
+        ROUND(AVG(unit_price)::NUMERIC, 2)  AS avg_selling_price,
+        ROUND(AVG(discount)::NUMERIC, 2)    AS avg_discount_pct,
+
+        -- Rank by revenue within category
+        RANK() OVER (
+            PARTITION BY category_name
+            ORDER BY SUM(line_revenue) DESC
+        )                                   AS revenue_rank_in_category
+
+    FROM enriched
+    GROUP BY 1, 2, 3, 4
+)
+
+SELECT * FROM product_stats
+ORDER BY total_revenue DESC
+  );
+  
+[0m13:44:15.615891 [debug] [Thread-3 (]: On model.ecommerce_dbt.mart_revenue: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.mart_revenue"} */
+
+  
+    
+
+  create  table "ecommerce_db"."dbt_dev_marts"."mart_revenue__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- Mart model: mart_revenue
+-- File: models/marts/mart_revenue.sql
+--
+-- Purpose: Daily and monthly revenue summary
+-- This is what a BI dashboard or analyst queries directly
+-- Materialized as TABLE — fast reads, pre-aggregated
+
+WITH enriched AS (
+    SELECT * FROM "ecommerce_db"."dbt_dev_intermediate"."int_order_items_enriched"
+),
+
+-- Only count delivered orders as revenue
+delivered AS (
+    SELECT * FROM enriched
+    WHERE order_status = 'delivered'
+),
+
+daily_revenue AS (
+    SELECT
+        order_date,
+        order_year,
+        order_month,
+        order_month_name,
+        country,
+        category_name,
+        price_band,
+
+        -- Metrics
+        COUNT(DISTINCT order_id)    AS total_orders,
+        COUNT(*)                    AS total_line_items,
+        SUM(quantity)               AS total_units_sold,
+        ROUND(SUM(line_revenue)::NUMERIC, 2)   AS total_revenue,
+        ROUND(AVG(line_revenue)::NUMERIC, 2)   AS avg_order_value,
+        ROUND(SUM(discount)::NUMERIC, 2)       AS total_discount_pct
+
+    FROM delivered
+    GROUP BY 1, 2, 3, 4, 5, 6, 7
+)
+
+SELECT * FROM daily_revenue
+ORDER BY order_date DESC
+  );
+  
+[0m13:44:15.758363 [debug] [Thread-4 (]: SQL status: SELECT 731 in 0.0 seconds
+[0m13:44:15.762174 [debug] [Thread-4 (]: Using postgres connection "model.ecommerce_dbt.mart_funnel"
+[0m13:44:15.763112 [debug] [Thread-4 (]: On model.ecommerce_dbt.mart_funnel: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.mart_funnel"} */
+alter table "ecommerce_db"."dbt_dev_marts"."mart_funnel" rename to "mart_funnel__dbt_backup"
+[0m13:44:15.764576 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:44:15.769172 [debug] [Thread-4 (]: Using postgres connection "model.ecommerce_dbt.mart_funnel"
+[0m13:44:15.770437 [debug] [Thread-4 (]: On model.ecommerce_dbt.mart_funnel: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.mart_funnel"} */
+alter table "ecommerce_db"."dbt_dev_marts"."mart_funnel__dbt_tmp" rename to "mart_funnel"
+[0m13:44:15.772047 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:44:15.777526 [debug] [Thread-4 (]: On model.ecommerce_dbt.mart_funnel: COMMIT
+[0m13:44:15.778630 [debug] [Thread-4 (]: Using postgres connection "model.ecommerce_dbt.mart_funnel"
+[0m13:44:15.779248 [debug] [Thread-4 (]: On model.ecommerce_dbt.mart_funnel: COMMIT
+[0m13:44:15.781079 [debug] [Thread-4 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:44:15.783716 [debug] [Thread-4 (]: Applying DROP to: "ecommerce_db"."dbt_dev_marts"."mart_funnel__dbt_backup"
+[0m13:44:15.786968 [debug] [Thread-4 (]: Using postgres connection "model.ecommerce_dbt.mart_funnel"
+[0m13:44:15.788306 [debug] [Thread-4 (]: On model.ecommerce_dbt.mart_funnel: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.mart_funnel"} */
+drop table if exists "ecommerce_db"."dbt_dev_marts"."mart_funnel__dbt_backup" cascade
+[0m13:44:15.793696 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m13:44:15.796228 [debug] [Thread-4 (]: Timing info for model.ecommerce_dbt.mart_funnel (execute): 13:44:15.431524 => 13:44:15.796033
+[0m13:44:15.797286 [debug] [Thread-4 (]: On model.ecommerce_dbt.mart_funnel: Close
+[0m13:44:15.798834 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0c75ee27-b968-4a30-84dd-fc65d2576994', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78dbe1449750>]}
+[0m13:44:15.800166 [info ] [Thread-4 (]: 5 of 8 OK created sql table model dbt_dev_marts.mart_funnel .................... [[32mSELECT 731[0m in 0.40s]
+[0m13:44:15.801726 [debug] [Thread-4 (]: Finished running node model.ecommerce_dbt.mart_funnel
+[0m13:44:16.110295 [debug] [Thread-2 (]: SQL status: SELECT 500 in 0.0 seconds
+[0m13:44:16.114546 [debug] [Thread-2 (]: Using postgres connection "model.ecommerce_dbt.mart_top_products"
+[0m13:44:16.115615 [debug] [Thread-2 (]: On model.ecommerce_dbt.mart_top_products: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.mart_top_products"} */
+alter table "ecommerce_db"."dbt_dev_marts"."mart_top_products" rename to "mart_top_products__dbt_backup"
+[0m13:44:16.117367 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:44:16.121715 [debug] [Thread-2 (]: Using postgres connection "model.ecommerce_dbt.mart_top_products"
+[0m13:44:16.123099 [debug] [Thread-2 (]: On model.ecommerce_dbt.mart_top_products: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.mart_top_products"} */
+alter table "ecommerce_db"."dbt_dev_marts"."mart_top_products__dbt_tmp" rename to "mart_top_products"
+[0m13:44:16.124970 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:44:16.128674 [debug] [Thread-2 (]: On model.ecommerce_dbt.mart_top_products: COMMIT
+[0m13:44:16.130136 [debug] [Thread-2 (]: Using postgres connection "model.ecommerce_dbt.mart_top_products"
+[0m13:44:16.131544 [debug] [Thread-2 (]: On model.ecommerce_dbt.mart_top_products: COMMIT
+[0m13:44:16.134574 [debug] [Thread-2 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:44:16.138055 [debug] [Thread-2 (]: Applying DROP to: "ecommerce_db"."dbt_dev_marts"."mart_top_products__dbt_backup"
+[0m13:44:16.139937 [debug] [Thread-2 (]: Using postgres connection "model.ecommerce_dbt.mart_top_products"
+[0m13:44:16.141199 [debug] [Thread-2 (]: On model.ecommerce_dbt.mart_top_products: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.mart_top_products"} */
+drop table if exists "ecommerce_db"."dbt_dev_marts"."mart_top_products__dbt_backup" cascade
+[0m13:44:16.145879 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m13:44:16.148701 [debug] [Thread-2 (]: Timing info for model.ecommerce_dbt.mart_top_products (execute): 13:44:15.583019 => 13:44:16.148349
+[0m13:44:16.150268 [debug] [Thread-2 (]: On model.ecommerce_dbt.mart_top_products: Close
+[0m13:44:16.151871 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0c75ee27-b968-4a30-84dd-fc65d2576994', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78dbe027bb50>]}
+[0m13:44:16.153400 [info ] [Thread-2 (]: 8 of 8 OK created sql table model dbt_dev_marts.mart_top_products .............. [[32mSELECT 500[0m in 0.60s]
+[0m13:44:16.156024 [debug] [Thread-2 (]: Finished running node model.ecommerce_dbt.mart_top_products
+[0m13:44:16.194368 [debug] [Thread-3 (]: SQL status: SELECT 16850 in 1.0 seconds
+[0m13:44:16.200049 [debug] [Thread-3 (]: Using postgres connection "model.ecommerce_dbt.mart_revenue"
+[0m13:44:16.200932 [debug] [Thread-3 (]: On model.ecommerce_dbt.mart_revenue: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.mart_revenue"} */
+alter table "ecommerce_db"."dbt_dev_marts"."mart_revenue" rename to "mart_revenue__dbt_backup"
+[0m13:44:16.202647 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:44:16.206157 [debug] [Thread-3 (]: Using postgres connection "model.ecommerce_dbt.mart_revenue"
+[0m13:44:16.207088 [debug] [Thread-3 (]: On model.ecommerce_dbt.mart_revenue: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.mart_revenue"} */
+alter table "ecommerce_db"."dbt_dev_marts"."mart_revenue__dbt_tmp" rename to "mart_revenue"
+[0m13:44:16.208521 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:44:16.210724 [debug] [Thread-3 (]: On model.ecommerce_dbt.mart_revenue: COMMIT
+[0m13:44:16.211482 [debug] [Thread-3 (]: Using postgres connection "model.ecommerce_dbt.mart_revenue"
+[0m13:44:16.212174 [debug] [Thread-3 (]: On model.ecommerce_dbt.mart_revenue: COMMIT
+[0m13:44:16.219417 [debug] [Thread-3 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:44:16.227494 [debug] [Thread-3 (]: Applying DROP to: "ecommerce_db"."dbt_dev_marts"."mart_revenue__dbt_backup"
+[0m13:44:16.229299 [debug] [Thread-3 (]: Using postgres connection "model.ecommerce_dbt.mart_revenue"
+[0m13:44:16.230449 [debug] [Thread-3 (]: On model.ecommerce_dbt.mart_revenue: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "model.ecommerce_dbt.mart_revenue"} */
+drop table if exists "ecommerce_db"."dbt_dev_marts"."mart_revenue__dbt_backup" cascade
+[0m13:44:16.236380 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m13:44:16.238909 [debug] [Thread-3 (]: Timing info for model.ecommerce_dbt.mart_revenue (execute): 13:44:15.575745 => 13:44:16.238748
+[0m13:44:16.239960 [debug] [Thread-3 (]: On model.ecommerce_dbt.mart_revenue: Close
+[0m13:44:16.241230 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0c75ee27-b968-4a30-84dd-fc65d2576994', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78dbe02c8550>]}
+[0m13:44:16.242661 [info ] [Thread-3 (]: 7 of 8 OK created sql table model dbt_dev_marts.mart_revenue ................... [[32mSELECT 16850[0m in 0.69s]
+[0m13:44:16.244710 [debug] [Thread-3 (]: Finished running node model.ecommerce_dbt.mart_revenue
+[0m13:44:16.248493 [debug] [MainThread]: Using postgres connection "master"
+[0m13:44:16.249679 [debug] [MainThread]: On master: BEGIN
+[0m13:44:16.250663 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:44:16.258719 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:16.260435 [debug] [MainThread]: On master: COMMIT
+[0m13:44:16.261602 [debug] [MainThread]: Using postgres connection "master"
+[0m13:44:16.262756 [debug] [MainThread]: On master: COMMIT
+[0m13:44:16.264115 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m13:44:16.265444 [debug] [MainThread]: On master: Close
+[0m13:44:16.269381 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:44:16.270924 [debug] [MainThread]: Connection 'model.ecommerce_dbt.mart_revenue' was properly closed.
+[0m13:44:16.272680 [debug] [MainThread]: Connection 'model.ecommerce_dbt.int_order_items_enriched' was properly closed.
+[0m13:44:16.273874 [debug] [MainThread]: Connection 'model.ecommerce_dbt.mart_top_products' was properly closed.
+[0m13:44:16.275040 [debug] [MainThread]: Connection 'model.ecommerce_dbt.mart_funnel' was properly closed.
+[0m13:44:16.276333 [info ] [MainThread]: 
+[0m13:44:16.277667 [info ] [MainThread]: Finished running 5 view models, 3 table models in 0 hours 0 minutes and 1.46 seconds (1.46s).
+[0m13:44:16.280017 [debug] [MainThread]: Command end result
+[0m13:44:16.303134 [info ] [MainThread]: 
+[0m13:44:16.305588 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:44:16.306996 [info ] [MainThread]: 
+[0m13:44:16.308412 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 TOTAL=8
+[0m13:44:16.310591 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.0472429, "process_user_time": 2.067697, "process_kernel_time": 0.607903, "process_mem_max_rss": "111828", "process_in_blocks": "304", "process_out_blocks": "0"}
+[0m13:44:16.311722 [debug] [MainThread]: Command `dbt run` succeeded at 13:44:16.311579 after 2.05 seconds
+[0m13:44:16.312712 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78dbe537f310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78dbe17ff160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78dbe02c1ba0>]}
+[0m13:44:16.313514 [debug] [MainThread]: Flushing usage events
+[0m13:44:24.866100 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74fe99d87340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74fe97b09e40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74fe97b09de0>]}
+
+
+============================== 13:44:24.869017 | 48b40494-8326-4181-818b-68dc5981975d ==============================
+[0m13:44:24.869017 [info ] [MainThread]: Running with dbt=1.7.0
+[0m13:44:24.870439 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/root/.dbt', 'log_path': '/usr/app/dbt/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt test', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:44:25.022173 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '48b40494-8326-4181-818b-68dc5981975d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74fe985193f0>]}
+[0m13:44:25.091259 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '48b40494-8326-4181-818b-68dc5981975d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74fe960912d0>]}
+[0m13:44:25.092827 [info ] [MainThread]: Registered adapter: postgres=1.7.0
+[0m13:44:25.105665 [debug] [MainThread]: checksum: 8434eacd4ffdf0ca3ab22bf0e2d55b45306c9599613e842b959405abc489e606, vars: {}, profile: , target: , version: 1.7.0
+[0m13:44:25.315548 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:44:25.316808 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:44:25.322249 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '48b40494-8326-4181-818b-68dc5981975d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74fe95ea0280>]}
+[0m13:44:25.353823 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '48b40494-8326-4181-818b-68dc5981975d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74fe95e6b130>]}
+[0m13:44:25.354896 [info ] [MainThread]: Found 8 models, 18 tests, 0 sources, 0 exposures, 0 metrics, 401 macros, 0 groups, 0 semantic models
+[0m13:44:25.356062 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '48b40494-8326-4181-818b-68dc5981975d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74fe95e6aef0>]}
+[0m13:44:25.358588 [info ] [MainThread]: 
+[0m13:44:25.360092 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m13:44:25.363323 [debug] [ThreadPool]: Acquiring new postgres connection 'list_ecommerce_db_dbt_dev_intermediate'
+[0m13:44:25.365575 [debug] [ThreadPool]: Acquiring new postgres connection 'list_ecommerce_db_dbt_dev_staging'
+[0m13:44:25.367067 [debug] [ThreadPool]: Acquiring new postgres connection 'list_ecommerce_db_dbt_dev_marts'
+[0m13:44:25.378817 [debug] [ThreadPool]: Using postgres connection "list_ecommerce_db_dbt_dev_intermediate"
+[0m13:44:25.380839 [debug] [ThreadPool]: Using postgres connection "list_ecommerce_db_dbt_dev_staging"
+[0m13:44:25.383304 [debug] [ThreadPool]: Using postgres connection "list_ecommerce_db_dbt_dev_marts"
+[0m13:44:25.384408 [debug] [ThreadPool]: On list_ecommerce_db_dbt_dev_intermediate: BEGIN
+[0m13:44:25.385397 [debug] [ThreadPool]: On list_ecommerce_db_dbt_dev_staging: BEGIN
+[0m13:44:25.386287 [debug] [ThreadPool]: On list_ecommerce_db_dbt_dev_marts: BEGIN
+[0m13:44:25.387101 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:44:25.388101 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:44:25.389300 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:44:25.400271 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:25.400784 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:25.401046 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:25.401686 [debug] [ThreadPool]: Using postgres connection "list_ecommerce_db_dbt_dev_intermediate"
+[0m13:44:25.403105 [debug] [ThreadPool]: Using postgres connection "list_ecommerce_db_dbt_dev_marts"
+[0m13:44:25.404790 [debug] [ThreadPool]: Using postgres connection "list_ecommerce_db_dbt_dev_staging"
+[0m13:44:25.406214 [debug] [ThreadPool]: On list_ecommerce_db_dbt_dev_intermediate: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "connection_name": "list_ecommerce_db_dbt_dev_intermediate"} */
+select
+      'ecommerce_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt_dev_intermediate'
+    union all
+    select
+      'ecommerce_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt_dev_intermediate'
+    union all
+    select
+      'ecommerce_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dbt_dev_intermediate'
+  
+[0m13:44:25.408067 [debug] [ThreadPool]: On list_ecommerce_db_dbt_dev_marts: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "connection_name": "list_ecommerce_db_dbt_dev_marts"} */
+select
+      'ecommerce_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt_dev_marts'
+    union all
+    select
+      'ecommerce_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt_dev_marts'
+    union all
+    select
+      'ecommerce_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dbt_dev_marts'
+  
+[0m13:44:25.409690 [debug] [ThreadPool]: On list_ecommerce_db_dbt_dev_staging: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "connection_name": "list_ecommerce_db_dbt_dev_staging"} */
+select
+      'ecommerce_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt_dev_staging'
+    union all
+    select
+      'ecommerce_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt_dev_staging'
+    union all
+    select
+      'ecommerce_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dbt_dev_staging'
+  
+[0m13:44:25.414483 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.0 seconds
+[0m13:44:25.415114 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.0 seconds
+[0m13:44:25.415353 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.0 seconds
+[0m13:44:25.417202 [debug] [ThreadPool]: On list_ecommerce_db_dbt_dev_intermediate: ROLLBACK
+[0m13:44:25.419023 [debug] [ThreadPool]: On list_ecommerce_db_dbt_dev_staging: ROLLBACK
+[0m13:44:25.421059 [debug] [ThreadPool]: On list_ecommerce_db_dbt_dev_marts: ROLLBACK
+[0m13:44:25.422487 [debug] [ThreadPool]: On list_ecommerce_db_dbt_dev_intermediate: Close
+[0m13:44:25.423411 [debug] [ThreadPool]: On list_ecommerce_db_dbt_dev_staging: Close
+[0m13:44:25.424677 [debug] [ThreadPool]: On list_ecommerce_db_dbt_dev_marts: Close
+[0m13:44:25.433939 [debug] [MainThread]: Using postgres connection "master"
+[0m13:44:25.435081 [debug] [MainThread]: On master: BEGIN
+[0m13:44:25.436108 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:44:25.444385 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:25.445571 [debug] [MainThread]: Using postgres connection "master"
+[0m13:44:25.446397 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m13:44:25.471339 [debug] [MainThread]: SQL status: SELECT 9 in 0.0 seconds
+[0m13:44:25.474333 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '48b40494-8326-4181-818b-68dc5981975d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74fe95efb610>]}
+[0m13:44:25.475823 [debug] [MainThread]: On master: ROLLBACK
+[0m13:44:25.476955 [debug] [MainThread]: Using postgres connection "master"
+[0m13:44:25.477673 [debug] [MainThread]: On master: BEGIN
+[0m13:44:25.478736 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:25.479607 [debug] [MainThread]: On master: COMMIT
+[0m13:44:25.480867 [debug] [MainThread]: Using postgres connection "master"
+[0m13:44:25.481672 [debug] [MainThread]: On master: COMMIT
+[0m13:44:25.482706 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m13:44:25.483563 [debug] [MainThread]: On master: Close
+[0m13:44:25.485013 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:44:25.486367 [info ] [MainThread]: 
+[0m13:44:25.491408 [debug] [Thread-1 (]: Began running node test.ecommerce_dbt.accepted_values_stg_clickstream_event_type__page_view__product_view__add_to_cart__remove_from_cart__checkout__purchase.d295ce1f32
+[0m13:44:25.491900 [debug] [Thread-2 (]: Began running node test.ecommerce_dbt.accepted_values_stg_orders_order_status__pending__processing__shipped__delivered__cancelled.f940ab6168
+[0m13:44:25.492188 [debug] [Thread-3 (]: Began running node test.ecommerce_dbt.accepted_values_stg_products_price_band__budget__mid__premium.93dabf2551
+[0m13:44:25.492552 [debug] [Thread-4 (]: Began running node test.ecommerce_dbt.not_null_mart_revenue_total_revenue.2a59f3cf2e
+[0m13:44:25.493193 [info ] [Thread-1 (]: 1 of 18 START test accepted_values_stg_clickstream_event_type__page_view__product_view__add_to_cart__remove_from_cart__checkout__purchase  [RUN]
+[0m13:44:25.494235 [info ] [Thread-2 (]: 2 of 18 START test accepted_values_stg_orders_order_status__pending__processing__shipped__delivered__cancelled  [RUN]
+[0m13:44:25.495496 [info ] [Thread-3 (]: 3 of 18 START test accepted_values_stg_products_price_band__budget__mid__premium  [RUN]
+[0m13:44:25.496685 [info ] [Thread-4 (]: 4 of 18 START test not_null_mart_revenue_total_revenue ......................... [RUN]
+[0m13:44:25.498129 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_ecommerce_db_dbt_dev_marts, now test.ecommerce_dbt.accepted_values_stg_clickstream_event_type__page_view__product_view__add_to_cart__remove_from_cart__checkout__purchase.d295ce1f32)
+[0m13:44:25.499115 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_ecommerce_db_dbt_dev_staging, now test.ecommerce_dbt.accepted_values_stg_orders_order_status__pending__processing__shipped__delivered__cancelled.f940ab6168)
+[0m13:44:25.500373 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_ecommerce_db_dbt_dev_intermediate, now test.ecommerce_dbt.accepted_values_stg_products_price_band__budget__mid__premium.93dabf2551)
+[0m13:44:25.501809 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.ecommerce_dbt.not_null_mart_revenue_total_revenue.2a59f3cf2e'
+[0m13:44:25.503046 [debug] [Thread-1 (]: Began compiling node test.ecommerce_dbt.accepted_values_stg_clickstream_event_type__page_view__product_view__add_to_cart__remove_from_cart__checkout__purchase.d295ce1f32
+[0m13:44:25.504144 [debug] [Thread-2 (]: Began compiling node test.ecommerce_dbt.accepted_values_stg_orders_order_status__pending__processing__shipped__delivered__cancelled.f940ab6168
+[0m13:44:25.505299 [debug] [Thread-3 (]: Began compiling node test.ecommerce_dbt.accepted_values_stg_products_price_band__budget__mid__premium.93dabf2551
+[0m13:44:25.506401 [debug] [Thread-4 (]: Began compiling node test.ecommerce_dbt.not_null_mart_revenue_total_revenue.2a59f3cf2e
+[0m13:44:25.526130 [debug] [Thread-1 (]: Writing injected SQL for node "test.ecommerce_dbt.accepted_values_stg_clickstream_event_type__page_view__product_view__add_to_cart__remove_from_cart__checkout__purchase.d295ce1f32"
+[0m13:44:25.531884 [debug] [Thread-2 (]: Writing injected SQL for node "test.ecommerce_dbt.accepted_values_stg_orders_order_status__pending__processing__shipped__delivered__cancelled.f940ab6168"
+[0m13:44:25.539087 [debug] [Thread-3 (]: Writing injected SQL for node "test.ecommerce_dbt.accepted_values_stg_products_price_band__budget__mid__premium.93dabf2551"
+[0m13:44:25.546801 [debug] [Thread-4 (]: Writing injected SQL for node "test.ecommerce_dbt.not_null_mart_revenue_total_revenue.2a59f3cf2e"
+[0m13:44:25.554733 [debug] [Thread-1 (]: Timing info for test.ecommerce_dbt.accepted_values_stg_clickstream_event_type__page_view__product_view__add_to_cart__remove_from_cart__checkout__purchase.d295ce1f32 (compile): 13:44:25.508051 => 13:44:25.554219
+[0m13:44:25.555244 [debug] [Thread-4 (]: Timing info for test.ecommerce_dbt.not_null_mart_revenue_total_revenue.2a59f3cf2e (compile): 13:44:25.540046 => 13:44:25.555015
+[0m13:44:25.556377 [debug] [Thread-1 (]: Began executing node test.ecommerce_dbt.accepted_values_stg_clickstream_event_type__page_view__product_view__add_to_cart__remove_from_cart__checkout__purchase.d295ce1f32
+[0m13:44:25.556934 [debug] [Thread-2 (]: Timing info for test.ecommerce_dbt.accepted_values_stg_orders_order_status__pending__processing__shipped__delivered__cancelled.f940ab6168 (compile): 13:44:25.526583 => 13:44:25.556698
+[0m13:44:25.557865 [debug] [Thread-4 (]: Began executing node test.ecommerce_dbt.not_null_mart_revenue_total_revenue.2a59f3cf2e
+[0m13:44:25.558330 [debug] [Thread-3 (]: Timing info for test.ecommerce_dbt.accepted_values_stg_products_price_band__budget__mid__premium.93dabf2551 (compile): 13:44:25.532873 => 13:44:25.558167
+[0m13:44:25.569770 [debug] [Thread-1 (]: Writing runtime sql for node "test.ecommerce_dbt.accepted_values_stg_clickstream_event_type__page_view__product_view__add_to_cart__remove_from_cart__checkout__purchase.d295ce1f32"
+[0m13:44:25.570554 [debug] [Thread-2 (]: Began executing node test.ecommerce_dbt.accepted_values_stg_orders_order_status__pending__processing__shipped__delivered__cancelled.f940ab6168
+[0m13:44:25.574778 [debug] [Thread-4 (]: Writing runtime sql for node "test.ecommerce_dbt.not_null_mart_revenue_total_revenue.2a59f3cf2e"
+[0m13:44:25.576126 [debug] [Thread-3 (]: Began executing node test.ecommerce_dbt.accepted_values_stg_products_price_band__budget__mid__premium.93dabf2551
+[0m13:44:25.580105 [debug] [Thread-2 (]: Writing runtime sql for node "test.ecommerce_dbt.accepted_values_stg_orders_order_status__pending__processing__shipped__delivered__cancelled.f940ab6168"
+[0m13:44:25.584096 [debug] [Thread-3 (]: Writing runtime sql for node "test.ecommerce_dbt.accepted_values_stg_products_price_band__budget__mid__premium.93dabf2551"
+[0m13:44:25.588305 [debug] [Thread-1 (]: Using postgres connection "test.ecommerce_dbt.accepted_values_stg_clickstream_event_type__page_view__product_view__add_to_cart__remove_from_cart__checkout__purchase.d295ce1f32"
+[0m13:44:25.588730 [debug] [Thread-4 (]: Using postgres connection "test.ecommerce_dbt.not_null_mart_revenue_total_revenue.2a59f3cf2e"
+[0m13:44:25.589263 [debug] [Thread-2 (]: Using postgres connection "test.ecommerce_dbt.accepted_values_stg_orders_order_status__pending__processing__shipped__delivered__cancelled.f940ab6168"
+[0m13:44:25.589987 [debug] [Thread-1 (]: On test.ecommerce_dbt.accepted_values_stg_clickstream_event_type__page_view__product_view__add_to_cart__remove_from_cart__checkout__purchase.d295ce1f32: BEGIN
+[0m13:44:25.591147 [debug] [Thread-4 (]: On test.ecommerce_dbt.not_null_mart_revenue_total_revenue.2a59f3cf2e: BEGIN
+[0m13:44:25.591770 [debug] [Thread-3 (]: Using postgres connection "test.ecommerce_dbt.accepted_values_stg_products_price_band__budget__mid__premium.93dabf2551"
+[0m13:44:25.592414 [debug] [Thread-2 (]: On test.ecommerce_dbt.accepted_values_stg_orders_order_status__pending__processing__shipped__delivered__cancelled.f940ab6168: BEGIN
+[0m13:44:25.593278 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:44:25.594191 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m13:44:25.595121 [debug] [Thread-3 (]: On test.ecommerce_dbt.accepted_values_stg_products_price_band__budget__mid__premium.93dabf2551: BEGIN
+[0m13:44:25.596481 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:44:25.600230 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m13:44:25.605597 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:25.606094 [debug] [Thread-4 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:25.606870 [debug] [Thread-1 (]: Using postgres connection "test.ecommerce_dbt.accepted_values_stg_clickstream_event_type__page_view__product_view__add_to_cart__remove_from_cart__checkout__purchase.d295ce1f32"
+[0m13:44:25.607861 [debug] [Thread-4 (]: Using postgres connection "test.ecommerce_dbt.not_null_mart_revenue_total_revenue.2a59f3cf2e"
+[0m13:44:25.608911 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:25.609376 [debug] [Thread-1 (]: On test.ecommerce_dbt.accepted_values_stg_clickstream_event_type__page_view__product_view__add_to_cart__remove_from_cart__checkout__purchase.d295ce1f32: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "test.ecommerce_dbt.accepted_values_stg_clickstream_event_type__page_view__product_view__add_to_cart__remove_from_cart__checkout__purchase.d295ce1f32"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        event_type as value_field,
+        count(*) as n_records
+
+    from "ecommerce_db"."dbt_dev_staging"."stg_clickstream"
+    group by event_type
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'page_view','product_view','add_to_cart','remove_from_cart','checkout','purchase'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m13:44:25.610712 [debug] [Thread-4 (]: On test.ecommerce_dbt.not_null_mart_revenue_total_revenue.2a59f3cf2e: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "test.ecommerce_dbt.not_null_mart_revenue_total_revenue.2a59f3cf2e"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select total_revenue
+from "ecommerce_db"."dbt_dev_marts"."mart_revenue"
+where total_revenue is null
+
+
+
+      
+    ) dbt_internal_test
+[0m13:44:25.611127 [debug] [Thread-3 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:25.611807 [debug] [Thread-2 (]: Using postgres connection "test.ecommerce_dbt.accepted_values_stg_orders_order_status__pending__processing__shipped__delivered__cancelled.f940ab6168"
+[0m13:44:25.614448 [debug] [Thread-3 (]: Using postgres connection "test.ecommerce_dbt.accepted_values_stg_products_price_band__budget__mid__premium.93dabf2551"
+[0m13:44:25.615596 [debug] [Thread-2 (]: On test.ecommerce_dbt.accepted_values_stg_orders_order_status__pending__processing__shipped__delivered__cancelled.f940ab6168: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "test.ecommerce_dbt.accepted_values_stg_orders_order_status__pending__processing__shipped__delivered__cancelled.f940ab6168"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        order_status as value_field,
+        count(*) as n_records
+
+    from "ecommerce_db"."dbt_dev_staging"."stg_orders"
+    group by order_status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'pending','processing','shipped','delivered','cancelled'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m13:44:25.616458 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m13:44:25.617567 [debug] [Thread-3 (]: On test.ecommerce_dbt.accepted_values_stg_products_price_band__budget__mid__premium.93dabf2551: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "test.ecommerce_dbt.accepted_values_stg_products_price_band__budget__mid__premium.93dabf2551"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        price_band as value_field,
+        count(*) as n_records
+
+    from "ecommerce_db"."dbt_dev_staging"."stg_products"
+    group by price_band
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'budget','mid','premium'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m13:44:25.621776 [debug] [Thread-4 (]: Timing info for test.ecommerce_dbt.not_null_mart_revenue_total_revenue.2a59f3cf2e (execute): 13:44:25.571707 => 13:44:25.621542
+[0m13:44:25.622142 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m13:44:25.623219 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m13:44:25.624276 [debug] [Thread-4 (]: On test.ecommerce_dbt.not_null_mart_revenue_total_revenue.2a59f3cf2e: ROLLBACK
+[0m13:44:25.625006 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m13:44:25.626939 [debug] [Thread-1 (]: Timing info for test.ecommerce_dbt.accepted_values_stg_clickstream_event_type__page_view__product_view__add_to_cart__remove_from_cart__checkout__purchase.d295ce1f32 (execute): 13:44:25.559006 => 13:44:25.626712
+[0m13:44:25.629135 [debug] [Thread-2 (]: Timing info for test.ecommerce_dbt.accepted_values_stg_orders_order_status__pending__processing__shipped__delivered__cancelled.f940ab6168 (execute): 13:44:25.578025 => 13:44:25.628977
+[0m13:44:25.630286 [debug] [Thread-4 (]: On test.ecommerce_dbt.not_null_mart_revenue_total_revenue.2a59f3cf2e: Close
+[0m13:44:25.631856 [debug] [Thread-3 (]: Timing info for test.ecommerce_dbt.accepted_values_stg_products_price_band__budget__mid__premium.93dabf2551 (execute): 13:44:25.582250 => 13:44:25.631705
+[0m13:44:25.632655 [debug] [Thread-1 (]: On test.ecommerce_dbt.accepted_values_stg_clickstream_event_type__page_view__product_view__add_to_cart__remove_from_cart__checkout__purchase.d295ce1f32: ROLLBACK
+[0m13:44:25.633572 [debug] [Thread-2 (]: On test.ecommerce_dbt.accepted_values_stg_orders_order_status__pending__processing__shipped__delivered__cancelled.f940ab6168: ROLLBACK
+[0m13:44:25.634970 [info ] [Thread-4 (]: 4 of 18 PASS not_null_mart_revenue_total_revenue ............................... [[32mPASS[0m in 0.13s]
+[0m13:44:25.636046 [debug] [Thread-3 (]: On test.ecommerce_dbt.accepted_values_stg_products_price_band__budget__mid__premium.93dabf2551: ROLLBACK
+[0m13:44:25.637567 [debug] [Thread-1 (]: On test.ecommerce_dbt.accepted_values_stg_clickstream_event_type__page_view__product_view__add_to_cart__remove_from_cart__checkout__purchase.d295ce1f32: Close
+[0m13:44:25.638488 [debug] [Thread-2 (]: On test.ecommerce_dbt.accepted_values_stg_orders_order_status__pending__processing__shipped__delivered__cancelled.f940ab6168: Close
+[0m13:44:25.639532 [debug] [Thread-4 (]: Finished running node test.ecommerce_dbt.not_null_mart_revenue_total_revenue.2a59f3cf2e
+[0m13:44:25.640918 [debug] [Thread-3 (]: On test.ecommerce_dbt.accepted_values_stg_products_price_band__budget__mid__premium.93dabf2551: Close
+[0m13:44:25.642133 [info ] [Thread-1 (]: 1 of 18 PASS accepted_values_stg_clickstream_event_type__page_view__product_view__add_to_cart__remove_from_cart__checkout__purchase  [[32mPASS[0m in 0.14s]
+[0m13:44:25.644143 [info ] [Thread-2 (]: 2 of 18 PASS accepted_values_stg_orders_order_status__pending__processing__shipped__delivered__cancelled  [[32mPASS[0m in 0.14s]
+[0m13:44:25.645900 [debug] [Thread-4 (]: Began running node test.ecommerce_dbt.not_null_mart_top_products_product_id.55aead8479
+[0m13:44:25.648386 [info ] [Thread-3 (]: 3 of 18 PASS accepted_values_stg_products_price_band__budget__mid__premium ..... [[32mPASS[0m in 0.15s]
+[0m13:44:25.649985 [debug] [Thread-1 (]: Finished running node test.ecommerce_dbt.accepted_values_stg_clickstream_event_type__page_view__product_view__add_to_cart__remove_from_cart__checkout__purchase.d295ce1f32
+[0m13:44:25.651288 [debug] [Thread-2 (]: Finished running node test.ecommerce_dbt.accepted_values_stg_orders_order_status__pending__processing__shipped__delivered__cancelled.f940ab6168
+[0m13:44:25.652560 [info ] [Thread-4 (]: 5 of 18 START test not_null_mart_top_products_product_id ....................... [RUN]
+[0m13:44:25.654815 [debug] [Thread-3 (]: Finished running node test.ecommerce_dbt.accepted_values_stg_products_price_band__budget__mid__premium.93dabf2551
+[0m13:44:25.657883 [debug] [Thread-1 (]: Began running node test.ecommerce_dbt.not_null_mart_top_products_total_revenue.0ac7b4dad0
+[0m13:44:25.659078 [debug] [Thread-2 (]: Began running node test.ecommerce_dbt.not_null_stg_clickstream_event_id.00f40ec93d
+[0m13:44:25.660904 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ecommerce_dbt.not_null_mart_revenue_total_revenue.2a59f3cf2e, now test.ecommerce_dbt.not_null_mart_top_products_product_id.55aead8479)
+[0m13:44:25.662767 [debug] [Thread-3 (]: Began running node test.ecommerce_dbt.not_null_stg_orders_line_revenue.2f1c0cf906
+[0m13:44:25.664604 [info ] [Thread-1 (]: 6 of 18 START test not_null_mart_top_products_total_revenue .................... [RUN]
+[0m13:44:25.665699 [info ] [Thread-2 (]: 7 of 18 START test not_null_stg_clickstream_event_id ........................... [RUN]
+[0m13:44:25.666948 [debug] [Thread-4 (]: Began compiling node test.ecommerce_dbt.not_null_mart_top_products_product_id.55aead8479
+[0m13:44:25.668740 [info ] [Thread-3 (]: 8 of 18 START test not_null_stg_orders_line_revenue ............................ [RUN]
+[0m13:44:25.671019 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ecommerce_dbt.accepted_values_stg_clickstream_event_type__page_view__product_view__add_to_cart__remove_from_cart__checkout__purchase.d295ce1f32, now test.ecommerce_dbt.not_null_mart_top_products_total_revenue.0ac7b4dad0)
+[0m13:44:25.672717 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ecommerce_dbt.accepted_values_stg_orders_order_status__pending__processing__shipped__delivered__cancelled.f940ab6168, now test.ecommerce_dbt.not_null_stg_clickstream_event_id.00f40ec93d)
+[0m13:44:25.678832 [debug] [Thread-4 (]: Writing injected SQL for node "test.ecommerce_dbt.not_null_mart_top_products_product_id.55aead8479"
+[0m13:44:25.680387 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.ecommerce_dbt.accepted_values_stg_products_price_band__budget__mid__premium.93dabf2551, now test.ecommerce_dbt.not_null_stg_orders_line_revenue.2f1c0cf906)
+[0m13:44:25.681759 [debug] [Thread-1 (]: Began compiling node test.ecommerce_dbt.not_null_mart_top_products_total_revenue.0ac7b4dad0
+[0m13:44:25.682855 [debug] [Thread-2 (]: Began compiling node test.ecommerce_dbt.not_null_stg_clickstream_event_id.00f40ec93d
+[0m13:44:25.684756 [debug] [Thread-3 (]: Began compiling node test.ecommerce_dbt.not_null_stg_orders_line_revenue.2f1c0cf906
+[0m13:44:25.690519 [debug] [Thread-1 (]: Writing injected SQL for node "test.ecommerce_dbt.not_null_mart_top_products_total_revenue.0ac7b4dad0"
+[0m13:44:25.695009 [debug] [Thread-2 (]: Writing injected SQL for node "test.ecommerce_dbt.not_null_stg_clickstream_event_id.00f40ec93d"
+[0m13:44:25.700294 [debug] [Thread-3 (]: Writing injected SQL for node "test.ecommerce_dbt.not_null_stg_orders_line_revenue.2f1c0cf906"
+[0m13:44:25.702027 [debug] [Thread-4 (]: Timing info for test.ecommerce_dbt.not_null_mart_top_products_product_id.55aead8479 (compile): 13:44:25.673826 => 13:44:25.701748
+[0m13:44:25.705651 [debug] [Thread-4 (]: Began executing node test.ecommerce_dbt.not_null_mart_top_products_product_id.55aead8479
+[0m13:44:25.709035 [debug] [Thread-4 (]: Writing runtime sql for node "test.ecommerce_dbt.not_null_mart_top_products_product_id.55aead8479"
+[0m13:44:25.711565 [debug] [Thread-1 (]: Timing info for test.ecommerce_dbt.not_null_mart_top_products_total_revenue.0ac7b4dad0 (compile): 13:44:25.685612 => 13:44:25.711329
+[0m13:44:25.712694 [debug] [Thread-1 (]: Began executing node test.ecommerce_dbt.not_null_mart_top_products_total_revenue.0ac7b4dad0
+[0m13:44:25.713222 [debug] [Thread-2 (]: Timing info for test.ecommerce_dbt.not_null_stg_clickstream_event_id.00f40ec93d (compile): 13:44:25.691705 => 13:44:25.712999
+[0m13:44:25.769504 [debug] [Thread-3 (]: Timing info for test.ecommerce_dbt.not_null_stg_orders_line_revenue.2f1c0cf906 (compile): 13:44:25.696239 => 13:44:25.769058
+[0m13:44:25.771574 [debug] [Thread-1 (]: Writing runtime sql for node "test.ecommerce_dbt.not_null_mart_top_products_total_revenue.0ac7b4dad0"
+[0m13:44:25.772602 [debug] [Thread-2 (]: Began executing node test.ecommerce_dbt.not_null_stg_clickstream_event_id.00f40ec93d
+[0m13:44:25.773721 [debug] [Thread-3 (]: Began executing node test.ecommerce_dbt.not_null_stg_orders_line_revenue.2f1c0cf906
+[0m13:44:25.777393 [debug] [Thread-2 (]: Writing runtime sql for node "test.ecommerce_dbt.not_null_stg_clickstream_event_id.00f40ec93d"
+[0m13:44:25.777796 [debug] [Thread-4 (]: Using postgres connection "test.ecommerce_dbt.not_null_mart_top_products_product_id.55aead8479"
+[0m13:44:25.780476 [debug] [Thread-3 (]: Writing runtime sql for node "test.ecommerce_dbt.not_null_stg_orders_line_revenue.2f1c0cf906"
+[0m13:44:25.780803 [debug] [Thread-1 (]: Using postgres connection "test.ecommerce_dbt.not_null_mart_top_products_total_revenue.0ac7b4dad0"
+[0m13:44:25.782229 [debug] [Thread-4 (]: On test.ecommerce_dbt.not_null_mart_top_products_product_id.55aead8479: BEGIN
+[0m13:44:25.783777 [debug] [Thread-1 (]: On test.ecommerce_dbt.not_null_mart_top_products_total_revenue.0ac7b4dad0: BEGIN
+[0m13:44:25.784845 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m13:44:25.786042 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:44:25.787540 [debug] [Thread-2 (]: Using postgres connection "test.ecommerce_dbt.not_null_stg_clickstream_event_id.00f40ec93d"
+[0m13:44:25.788965 [debug] [Thread-3 (]: Using postgres connection "test.ecommerce_dbt.not_null_stg_orders_line_revenue.2f1c0cf906"
+[0m13:44:25.789420 [debug] [Thread-2 (]: On test.ecommerce_dbt.not_null_stg_clickstream_event_id.00f40ec93d: BEGIN
+[0m13:44:25.790551 [debug] [Thread-3 (]: On test.ecommerce_dbt.not_null_stg_orders_line_revenue.2f1c0cf906: BEGIN
+[0m13:44:25.791467 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:44:25.792791 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m13:44:25.793328 [debug] [Thread-4 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:25.794157 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:25.796229 [debug] [Thread-4 (]: Using postgres connection "test.ecommerce_dbt.not_null_mart_top_products_product_id.55aead8479"
+[0m13:44:25.797290 [debug] [Thread-1 (]: Using postgres connection "test.ecommerce_dbt.not_null_mart_top_products_total_revenue.0ac7b4dad0"
+[0m13:44:25.798059 [debug] [Thread-4 (]: On test.ecommerce_dbt.not_null_mart_top_products_product_id.55aead8479: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "test.ecommerce_dbt.not_null_mart_top_products_product_id.55aead8479"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select product_id
+from "ecommerce_db"."dbt_dev_marts"."mart_top_products"
+where product_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m13:44:25.798883 [debug] [Thread-1 (]: On test.ecommerce_dbt.not_null_mart_top_products_total_revenue.0ac7b4dad0: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "test.ecommerce_dbt.not_null_mart_top_products_total_revenue.0ac7b4dad0"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select total_revenue
+from "ecommerce_db"."dbt_dev_marts"."mart_top_products"
+where total_revenue is null
+
+
+
+      
+    ) dbt_internal_test
+[0m13:44:25.800344 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:25.800794 [debug] [Thread-3 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:25.801050 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m13:44:25.801876 [debug] [Thread-2 (]: Using postgres connection "test.ecommerce_dbt.not_null_stg_clickstream_event_id.00f40ec93d"
+[0m13:44:25.802229 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m13:44:25.802832 [debug] [Thread-3 (]: Using postgres connection "test.ecommerce_dbt.not_null_stg_orders_line_revenue.2f1c0cf906"
+[0m13:44:25.805019 [debug] [Thread-4 (]: Timing info for test.ecommerce_dbt.not_null_mart_top_products_product_id.55aead8479 (execute): 13:44:25.706482 => 13:44:25.804840
+[0m13:44:25.805829 [debug] [Thread-2 (]: On test.ecommerce_dbt.not_null_stg_clickstream_event_id.00f40ec93d: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "test.ecommerce_dbt.not_null_stg_clickstream_event_id.00f40ec93d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select event_id
+from "ecommerce_db"."dbt_dev_staging"."stg_clickstream"
+where event_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m13:44:25.807601 [debug] [Thread-1 (]: Timing info for test.ecommerce_dbt.not_null_mart_top_products_total_revenue.0ac7b4dad0 (execute): 13:44:25.713988 => 13:44:25.807463
+[0m13:44:25.808679 [debug] [Thread-3 (]: On test.ecommerce_dbt.not_null_stg_orders_line_revenue.2f1c0cf906: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "test.ecommerce_dbt.not_null_stg_orders_line_revenue.2f1c0cf906"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select line_revenue
+from "ecommerce_db"."dbt_dev_staging"."stg_orders"
+where line_revenue is null
+
+
+
+      
+    ) dbt_internal_test
+[0m13:44:25.809735 [debug] [Thread-4 (]: On test.ecommerce_dbt.not_null_mart_top_products_product_id.55aead8479: ROLLBACK
+[0m13:44:25.810973 [debug] [Thread-1 (]: On test.ecommerce_dbt.not_null_mart_top_products_total_revenue.0ac7b4dad0: ROLLBACK
+[0m13:44:25.813034 [debug] [Thread-4 (]: On test.ecommerce_dbt.not_null_mart_top_products_product_id.55aead8479: Close
+[0m13:44:25.814195 [debug] [Thread-1 (]: On test.ecommerce_dbt.not_null_mart_top_products_total_revenue.0ac7b4dad0: Close
+[0m13:44:25.815746 [info ] [Thread-4 (]: 5 of 18 PASS not_null_mart_top_products_product_id ............................. [[32mPASS[0m in 0.16s]
+[0m13:44:25.817550 [info ] [Thread-1 (]: 6 of 18 PASS not_null_mart_top_products_total_revenue .......................... [[32mPASS[0m in 0.15s]
+[0m13:44:25.819285 [debug] [Thread-4 (]: Finished running node test.ecommerce_dbt.not_null_mart_top_products_product_id.55aead8479
+[0m13:44:25.820980 [debug] [Thread-1 (]: Finished running node test.ecommerce_dbt.not_null_mart_top_products_total_revenue.0ac7b4dad0
+[0m13:44:25.822686 [debug] [Thread-4 (]: Began running node test.ecommerce_dbt.not_null_stg_orders_order_id.81cfe2fe64
+[0m13:44:25.824402 [debug] [Thread-1 (]: Began running node test.ecommerce_dbt.not_null_stg_orders_order_status.d7fcf15f79
+[0m13:44:25.825993 [info ] [Thread-4 (]: 9 of 18 START test not_null_stg_orders_order_id ................................ [RUN]
+[0m13:44:25.826732 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m13:44:25.827907 [info ] [Thread-1 (]: 10 of 18 START test not_null_stg_orders_order_status ........................... [RUN]
+[0m13:44:25.829292 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m13:44:25.830141 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ecommerce_dbt.not_null_mart_top_products_product_id.55aead8479, now test.ecommerce_dbt.not_null_stg_orders_order_id.81cfe2fe64)
+[0m13:44:25.832729 [debug] [Thread-3 (]: Timing info for test.ecommerce_dbt.not_null_stg_orders_line_revenue.2f1c0cf906 (execute): 13:44:25.778431 => 13:44:25.832422
+[0m13:44:25.834753 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ecommerce_dbt.not_null_mart_top_products_total_revenue.0ac7b4dad0, now test.ecommerce_dbt.not_null_stg_orders_order_status.d7fcf15f79)
+[0m13:44:25.837837 [debug] [Thread-2 (]: Timing info for test.ecommerce_dbt.not_null_stg_clickstream_event_id.00f40ec93d (execute): 13:44:25.775546 => 13:44:25.837464
+[0m13:44:25.840633 [debug] [Thread-4 (]: Began compiling node test.ecommerce_dbt.not_null_stg_orders_order_id.81cfe2fe64
+[0m13:44:25.841641 [debug] [Thread-3 (]: On test.ecommerce_dbt.not_null_stg_orders_line_revenue.2f1c0cf906: ROLLBACK
+[0m13:44:25.842837 [debug] [Thread-1 (]: Began compiling node test.ecommerce_dbt.not_null_stg_orders_order_status.d7fcf15f79
+[0m13:44:25.844227 [debug] [Thread-2 (]: On test.ecommerce_dbt.not_null_stg_clickstream_event_id.00f40ec93d: ROLLBACK
+[0m13:44:25.848530 [debug] [Thread-4 (]: Writing injected SQL for node "test.ecommerce_dbt.not_null_stg_orders_order_id.81cfe2fe64"
+[0m13:44:25.850258 [debug] [Thread-3 (]: On test.ecommerce_dbt.not_null_stg_orders_line_revenue.2f1c0cf906: Close
+[0m13:44:25.855295 [debug] [Thread-1 (]: Writing injected SQL for node "test.ecommerce_dbt.not_null_stg_orders_order_status.d7fcf15f79"
+[0m13:44:25.857954 [debug] [Thread-2 (]: On test.ecommerce_dbt.not_null_stg_clickstream_event_id.00f40ec93d: Close
+[0m13:44:25.860492 [info ] [Thread-3 (]: 8 of 18 PASS not_null_stg_orders_line_revenue .................................. [[32mPASS[0m in 0.18s]
+[0m13:44:25.863324 [info ] [Thread-2 (]: 7 of 18 PASS not_null_stg_clickstream_event_id ................................. [[32mPASS[0m in 0.19s]
+[0m13:44:25.864689 [debug] [Thread-3 (]: Finished running node test.ecommerce_dbt.not_null_stg_orders_line_revenue.2f1c0cf906
+[0m13:44:25.866011 [debug] [Thread-2 (]: Finished running node test.ecommerce_dbt.not_null_stg_clickstream_event_id.00f40ec93d
+[0m13:44:25.867174 [debug] [Thread-3 (]: Began running node test.ecommerce_dbt.not_null_stg_products_product_id.6373b0acf3
+[0m13:44:25.867837 [debug] [Thread-4 (]: Timing info for test.ecommerce_dbt.not_null_stg_orders_order_id.81cfe2fe64 (compile): 13:44:25.845108 => 13:44:25.867527
+[0m13:44:25.869140 [debug] [Thread-2 (]: Began running node test.ecommerce_dbt.not_null_stg_users_country.8ce3940201
+[0m13:44:25.870175 [debug] [Thread-1 (]: Timing info for test.ecommerce_dbt.not_null_stg_orders_order_status.d7fcf15f79 (compile): 13:44:25.850918 => 13:44:25.869992
+[0m13:44:25.870678 [info ] [Thread-3 (]: 11 of 18 START test not_null_stg_products_product_id ........................... [RUN]
+[0m13:44:25.871627 [debug] [Thread-4 (]: Began executing node test.ecommerce_dbt.not_null_stg_orders_order_id.81cfe2fe64
+[0m13:44:25.873354 [info ] [Thread-2 (]: 12 of 18 START test not_null_stg_users_country ................................. [RUN]
+[0m13:44:25.874796 [debug] [Thread-1 (]: Began executing node test.ecommerce_dbt.not_null_stg_orders_order_status.d7fcf15f79
+[0m13:44:25.876031 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.ecommerce_dbt.not_null_stg_orders_line_revenue.2f1c0cf906, now test.ecommerce_dbt.not_null_stg_products_product_id.6373b0acf3)
+[0m13:44:25.879789 [debug] [Thread-4 (]: Writing runtime sql for node "test.ecommerce_dbt.not_null_stg_orders_order_id.81cfe2fe64"
+[0m13:44:25.881178 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ecommerce_dbt.not_null_stg_clickstream_event_id.00f40ec93d, now test.ecommerce_dbt.not_null_stg_users_country.8ce3940201)
+[0m13:44:25.885390 [debug] [Thread-1 (]: Writing runtime sql for node "test.ecommerce_dbt.not_null_stg_orders_order_status.d7fcf15f79"
+[0m13:44:25.886673 [debug] [Thread-3 (]: Began compiling node test.ecommerce_dbt.not_null_stg_products_product_id.6373b0acf3
+[0m13:44:25.888391 [debug] [Thread-2 (]: Began compiling node test.ecommerce_dbt.not_null_stg_users_country.8ce3940201
+[0m13:44:25.894103 [debug] [Thread-3 (]: Writing injected SQL for node "test.ecommerce_dbt.not_null_stg_products_product_id.6373b0acf3"
+[0m13:44:25.901154 [debug] [Thread-2 (]: Writing injected SQL for node "test.ecommerce_dbt.not_null_stg_users_country.8ce3940201"
+[0m13:44:25.902720 [debug] [Thread-4 (]: Using postgres connection "test.ecommerce_dbt.not_null_stg_orders_order_id.81cfe2fe64"
+[0m13:44:25.903632 [debug] [Thread-1 (]: Using postgres connection "test.ecommerce_dbt.not_null_stg_orders_order_status.d7fcf15f79"
+[0m13:44:25.905186 [debug] [Thread-4 (]: On test.ecommerce_dbt.not_null_stg_orders_order_id.81cfe2fe64: BEGIN
+[0m13:44:25.906544 [debug] [Thread-1 (]: On test.ecommerce_dbt.not_null_stg_orders_order_status.d7fcf15f79: BEGIN
+[0m13:44:25.907932 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m13:44:25.908687 [debug] [Thread-3 (]: Timing info for test.ecommerce_dbt.not_null_stg_products_product_id.6373b0acf3 (compile): 13:44:25.889775 => 13:44:25.908385
+[0m13:44:25.910119 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:44:25.910670 [debug] [Thread-2 (]: Timing info for test.ecommerce_dbt.not_null_stg_users_country.8ce3940201 (compile): 13:44:25.895343 => 13:44:25.910431
+[0m13:44:25.913398 [debug] [Thread-3 (]: Began executing node test.ecommerce_dbt.not_null_stg_products_product_id.6373b0acf3
+[0m13:44:25.916550 [debug] [Thread-2 (]: Began executing node test.ecommerce_dbt.not_null_stg_users_country.8ce3940201
+[0m13:44:25.919893 [debug] [Thread-3 (]: Writing runtime sql for node "test.ecommerce_dbt.not_null_stg_products_product_id.6373b0acf3"
+[0m13:44:25.921291 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:25.921697 [debug] [Thread-4 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:25.923369 [debug] [Thread-2 (]: Writing runtime sql for node "test.ecommerce_dbt.not_null_stg_users_country.8ce3940201"
+[0m13:44:25.925319 [debug] [Thread-1 (]: Using postgres connection "test.ecommerce_dbt.not_null_stg_orders_order_status.d7fcf15f79"
+[0m13:44:25.926316 [debug] [Thread-4 (]: Using postgres connection "test.ecommerce_dbt.not_null_stg_orders_order_id.81cfe2fe64"
+[0m13:44:25.927868 [debug] [Thread-1 (]: On test.ecommerce_dbt.not_null_stg_orders_order_status.d7fcf15f79: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "test.ecommerce_dbt.not_null_stg_orders_order_status.d7fcf15f79"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select order_status
+from "ecommerce_db"."dbt_dev_staging"."stg_orders"
+where order_status is null
+
+
+
+      
+    ) dbt_internal_test
+[0m13:44:25.928932 [debug] [Thread-4 (]: On test.ecommerce_dbt.not_null_stg_orders_order_id.81cfe2fe64: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "test.ecommerce_dbt.not_null_stg_orders_order_id.81cfe2fe64"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select order_id
+from "ecommerce_db"."dbt_dev_staging"."stg_orders"
+where order_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m13:44:25.930757 [debug] [Thread-3 (]: Using postgres connection "test.ecommerce_dbt.not_null_stg_products_product_id.6373b0acf3"
+[0m13:44:25.932232 [debug] [Thread-2 (]: Using postgres connection "test.ecommerce_dbt.not_null_stg_users_country.8ce3940201"
+[0m13:44:25.932831 [debug] [Thread-3 (]: On test.ecommerce_dbt.not_null_stg_products_product_id.6373b0acf3: BEGIN
+[0m13:44:25.934247 [debug] [Thread-2 (]: On test.ecommerce_dbt.not_null_stg_users_country.8ce3940201: BEGIN
+[0m13:44:25.934823 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m13:44:25.935250 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m13:44:25.936197 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m13:44:25.937033 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:44:25.938983 [debug] [Thread-1 (]: Timing info for test.ecommerce_dbt.not_null_stg_orders_order_status.d7fcf15f79 (execute): 13:44:25.882252 => 13:44:25.938801
+[0m13:44:25.940769 [debug] [Thread-4 (]: Timing info for test.ecommerce_dbt.not_null_stg_orders_order_id.81cfe2fe64 (execute): 13:44:25.876963 => 13:44:25.940619
+[0m13:44:25.943800 [debug] [Thread-1 (]: On test.ecommerce_dbt.not_null_stg_orders_order_status.d7fcf15f79: ROLLBACK
+[0m13:44:25.945181 [debug] [Thread-4 (]: On test.ecommerce_dbt.not_null_stg_orders_order_id.81cfe2fe64: ROLLBACK
+[0m13:44:25.946637 [debug] [Thread-1 (]: On test.ecommerce_dbt.not_null_stg_orders_order_status.d7fcf15f79: Close
+[0m13:44:25.947964 [debug] [Thread-4 (]: On test.ecommerce_dbt.not_null_stg_orders_order_id.81cfe2fe64: Close
+[0m13:44:25.950063 [debug] [Thread-3 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:25.950626 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:25.949554 [info ] [Thread-1 (]: 10 of 18 PASS not_null_stg_orders_order_status ................................. [[32mPASS[0m in 0.12s]
+[0m13:44:25.952633 [info ] [Thread-4 (]: 9 of 18 PASS not_null_stg_orders_order_id ...................................... [[32mPASS[0m in 0.12s]
+[0m13:44:25.953906 [debug] [Thread-3 (]: Using postgres connection "test.ecommerce_dbt.not_null_stg_products_product_id.6373b0acf3"
+[0m13:44:25.955113 [debug] [Thread-2 (]: Using postgres connection "test.ecommerce_dbt.not_null_stg_users_country.8ce3940201"
+[0m13:44:25.956419 [debug] [Thread-1 (]: Finished running node test.ecommerce_dbt.not_null_stg_orders_order_status.d7fcf15f79
+[0m13:44:25.957781 [debug] [Thread-4 (]: Finished running node test.ecommerce_dbt.not_null_stg_orders_order_id.81cfe2fe64
+[0m13:44:25.958985 [debug] [Thread-3 (]: On test.ecommerce_dbt.not_null_stg_products_product_id.6373b0acf3: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "test.ecommerce_dbt.not_null_stg_products_product_id.6373b0acf3"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select product_id
+from "ecommerce_db"."dbt_dev_staging"."stg_products"
+where product_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m13:44:25.960285 [debug] [Thread-2 (]: On test.ecommerce_dbt.not_null_stg_users_country.8ce3940201: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "test.ecommerce_dbt.not_null_stg_users_country.8ce3940201"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select country
+from "ecommerce_db"."dbt_dev_staging"."stg_users"
+where country is null
+
+
+
+      
+    ) dbt_internal_test
+[0m13:44:25.961262 [debug] [Thread-1 (]: Began running node test.ecommerce_dbt.not_null_stg_users_email.2723c62e0e
+[0m13:44:25.962328 [debug] [Thread-4 (]: Began running node test.ecommerce_dbt.not_null_stg_users_user_id.980dfc1b77
+[0m13:44:25.965481 [info ] [Thread-1 (]: 13 of 18 START test not_null_stg_users_email ................................... [RUN]
+[0m13:44:25.966116 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m13:44:25.966457 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m13:44:25.967325 [info ] [Thread-4 (]: 14 of 18 START test not_null_stg_users_user_id ................................. [RUN]
+[0m13:44:25.968973 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ecommerce_dbt.not_null_stg_orders_order_status.d7fcf15f79, now test.ecommerce_dbt.not_null_stg_users_email.2723c62e0e)
+[0m13:44:25.971921 [debug] [Thread-3 (]: Timing info for test.ecommerce_dbt.not_null_stg_products_product_id.6373b0acf3 (execute): 13:44:25.917478 => 13:44:25.971539
+[0m13:44:25.974286 [debug] [Thread-2 (]: Timing info for test.ecommerce_dbt.not_null_stg_users_country.8ce3940201 (execute): 13:44:25.921964 => 13:44:25.974032
+[0m13:44:25.976646 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ecommerce_dbt.not_null_stg_orders_order_id.81cfe2fe64, now test.ecommerce_dbt.not_null_stg_users_user_id.980dfc1b77)
+[0m13:44:25.979844 [debug] [Thread-1 (]: Began compiling node test.ecommerce_dbt.not_null_stg_users_email.2723c62e0e
+[0m13:44:25.980923 [debug] [Thread-3 (]: On test.ecommerce_dbt.not_null_stg_products_product_id.6373b0acf3: ROLLBACK
+[0m13:44:25.983089 [debug] [Thread-2 (]: On test.ecommerce_dbt.not_null_stg_users_country.8ce3940201: ROLLBACK
+[0m13:44:25.984322 [debug] [Thread-4 (]: Began compiling node test.ecommerce_dbt.not_null_stg_users_user_id.980dfc1b77
+[0m13:44:25.989193 [debug] [Thread-1 (]: Writing injected SQL for node "test.ecommerce_dbt.not_null_stg_users_email.2723c62e0e"
+[0m13:44:25.991015 [debug] [Thread-3 (]: On test.ecommerce_dbt.not_null_stg_products_product_id.6373b0acf3: Close
+[0m13:44:25.992151 [debug] [Thread-2 (]: On test.ecommerce_dbt.not_null_stg_users_country.8ce3940201: Close
+[0m13:44:25.997291 [debug] [Thread-4 (]: Writing injected SQL for node "test.ecommerce_dbt.not_null_stg_users_user_id.980dfc1b77"
+[0m13:44:26.000377 [info ] [Thread-3 (]: 11 of 18 PASS not_null_stg_products_product_id ................................. [[32mPASS[0m in 0.12s]
+[0m13:44:26.001932 [info ] [Thread-2 (]: 12 of 18 PASS not_null_stg_users_country ....................................... [[32mPASS[0m in 0.12s]
+[0m13:44:26.005072 [debug] [Thread-3 (]: Finished running node test.ecommerce_dbt.not_null_stg_products_product_id.6373b0acf3
+[0m13:44:26.006386 [debug] [Thread-2 (]: Finished running node test.ecommerce_dbt.not_null_stg_users_country.8ce3940201
+[0m13:44:26.007501 [debug] [Thread-3 (]: Began running node test.ecommerce_dbt.unique_stg_clickstream_event_id.2fed12c0a9
+[0m13:44:26.008881 [debug] [Thread-2 (]: Began running node test.ecommerce_dbt.unique_stg_products_product_id.7d950a1467
+[0m13:44:26.009748 [debug] [Thread-1 (]: Timing info for test.ecommerce_dbt.not_null_stg_users_email.2723c62e0e (compile): 13:44:25.985180 => 13:44:26.009434
+[0m13:44:26.010878 [info ] [Thread-3 (]: 15 of 18 START test unique_stg_clickstream_event_id ............................ [RUN]
+[0m13:44:26.012106 [info ] [Thread-2 (]: 16 of 18 START test unique_stg_products_product_id ............................. [RUN]
+[0m13:44:26.012709 [debug] [Thread-4 (]: Timing info for test.ecommerce_dbt.not_null_stg_users_user_id.980dfc1b77 (compile): 13:44:25.992728 => 13:44:26.012461
+[0m13:44:26.013720 [debug] [Thread-1 (]: Began executing node test.ecommerce_dbt.not_null_stg_users_email.2723c62e0e
+[0m13:44:26.015105 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.ecommerce_dbt.not_null_stg_products_product_id.6373b0acf3, now test.ecommerce_dbt.unique_stg_clickstream_event_id.2fed12c0a9)
+[0m13:44:26.016561 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ecommerce_dbt.not_null_stg_users_country.8ce3940201, now test.ecommerce_dbt.unique_stg_products_product_id.7d950a1467)
+[0m13:44:26.018099 [debug] [Thread-4 (]: Began executing node test.ecommerce_dbt.not_null_stg_users_user_id.980dfc1b77
+[0m13:44:26.021564 [debug] [Thread-1 (]: Writing runtime sql for node "test.ecommerce_dbt.not_null_stg_users_email.2723c62e0e"
+[0m13:44:26.023039 [debug] [Thread-3 (]: Began compiling node test.ecommerce_dbt.unique_stg_clickstream_event_id.2fed12c0a9
+[0m13:44:26.024629 [debug] [Thread-2 (]: Began compiling node test.ecommerce_dbt.unique_stg_products_product_id.7d950a1467
+[0m13:44:26.027715 [debug] [Thread-4 (]: Writing runtime sql for node "test.ecommerce_dbt.not_null_stg_users_user_id.980dfc1b77"
+[0m13:44:26.037757 [debug] [Thread-3 (]: Writing injected SQL for node "test.ecommerce_dbt.unique_stg_clickstream_event_id.2fed12c0a9"
+[0m13:44:26.042612 [debug] [Thread-2 (]: Writing injected SQL for node "test.ecommerce_dbt.unique_stg_products_product_id.7d950a1467"
+[0m13:44:26.044664 [debug] [Thread-1 (]: Using postgres connection "test.ecommerce_dbt.not_null_stg_users_email.2723c62e0e"
+[0m13:44:26.047171 [debug] [Thread-1 (]: On test.ecommerce_dbt.not_null_stg_users_email.2723c62e0e: BEGIN
+[0m13:44:26.048183 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:44:26.051912 [debug] [Thread-2 (]: Timing info for test.ecommerce_dbt.unique_stg_products_product_id.7d950a1467 (compile): 13:44:26.038987 => 13:44:26.051337
+[0m13:44:26.052575 [debug] [Thread-4 (]: Using postgres connection "test.ecommerce_dbt.not_null_stg_users_user_id.980dfc1b77"
+[0m13:44:26.053660 [debug] [Thread-2 (]: Began executing node test.ecommerce_dbt.unique_stg_products_product_id.7d950a1467
+[0m13:44:26.054600 [debug] [Thread-3 (]: Timing info for test.ecommerce_dbt.unique_stg_clickstream_event_id.2fed12c0a9 (compile): 13:44:26.029655 => 13:44:26.054317
+[0m13:44:26.055390 [debug] [Thread-4 (]: On test.ecommerce_dbt.not_null_stg_users_user_id.980dfc1b77: BEGIN
+[0m13:44:26.058851 [debug] [Thread-2 (]: Writing runtime sql for node "test.ecommerce_dbt.unique_stg_products_product_id.7d950a1467"
+[0m13:44:26.060064 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:26.060567 [debug] [Thread-3 (]: Began executing node test.ecommerce_dbt.unique_stg_clickstream_event_id.2fed12c0a9
+[0m13:44:26.061629 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m13:44:26.063713 [debug] [Thread-1 (]: Using postgres connection "test.ecommerce_dbt.not_null_stg_users_email.2723c62e0e"
+[0m13:44:26.066472 [debug] [Thread-3 (]: Writing runtime sql for node "test.ecommerce_dbt.unique_stg_clickstream_event_id.2fed12c0a9"
+[0m13:44:26.068756 [debug] [Thread-1 (]: On test.ecommerce_dbt.not_null_stg_users_email.2723c62e0e: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "test.ecommerce_dbt.not_null_stg_users_email.2723c62e0e"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select email
+from "ecommerce_db"."dbt_dev_staging"."stg_users"
+where email is null
+
+
+
+      
+    ) dbt_internal_test
+[0m13:44:26.072936 [debug] [Thread-2 (]: Using postgres connection "test.ecommerce_dbt.unique_stg_products_product_id.7d950a1467"
+[0m13:44:26.074331 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m13:44:26.074857 [debug] [Thread-2 (]: On test.ecommerce_dbt.unique_stg_products_product_id.7d950a1467: BEGIN
+[0m13:44:26.075490 [debug] [Thread-3 (]: Using postgres connection "test.ecommerce_dbt.unique_stg_clickstream_event_id.2fed12c0a9"
+[0m13:44:26.078234 [debug] [Thread-1 (]: Timing info for test.ecommerce_dbt.not_null_stg_users_email.2723c62e0e (execute): 13:44:26.019031 => 13:44:26.077836
+[0m13:44:26.078820 [debug] [Thread-4 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:26.080000 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:44:26.081171 [debug] [Thread-3 (]: On test.ecommerce_dbt.unique_stg_clickstream_event_id.2fed12c0a9: BEGIN
+[0m13:44:26.082214 [debug] [Thread-1 (]: On test.ecommerce_dbt.not_null_stg_users_email.2723c62e0e: ROLLBACK
+[0m13:44:26.082959 [debug] [Thread-4 (]: Using postgres connection "test.ecommerce_dbt.not_null_stg_users_user_id.980dfc1b77"
+[0m13:44:26.084460 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m13:44:26.085725 [debug] [Thread-1 (]: On test.ecommerce_dbt.not_null_stg_users_email.2723c62e0e: Close
+[0m13:44:26.086530 [debug] [Thread-4 (]: On test.ecommerce_dbt.not_null_stg_users_user_id.980dfc1b77: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "test.ecommerce_dbt.not_null_stg_users_user_id.980dfc1b77"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select user_id
+from "ecommerce_db"."dbt_dev_staging"."stg_users"
+where user_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m13:44:26.089263 [info ] [Thread-1 (]: 13 of 18 PASS not_null_stg_users_email ......................................... [[32mPASS[0m in 0.12s]
+[0m13:44:26.092891 [debug] [Thread-1 (]: Finished running node test.ecommerce_dbt.not_null_stg_users_email.2723c62e0e
+[0m13:44:26.093454 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:26.094049 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m13:44:26.094629 [debug] [Thread-3 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:26.095361 [debug] [Thread-1 (]: Began running node test.ecommerce_dbt.unique_stg_users_email.7ba574d07b
+[0m13:44:26.096624 [debug] [Thread-2 (]: Using postgres connection "test.ecommerce_dbt.unique_stg_products_product_id.7d950a1467"
+[0m13:44:26.099106 [debug] [Thread-4 (]: Timing info for test.ecommerce_dbt.not_null_stg_users_user_id.980dfc1b77 (execute): 13:44:26.025500 => 13:44:26.098814
+[0m13:44:26.100264 [debug] [Thread-3 (]: Using postgres connection "test.ecommerce_dbt.unique_stg_clickstream_event_id.2fed12c0a9"
+[0m13:44:26.101368 [info ] [Thread-1 (]: 17 of 18 START test unique_stg_users_email ..................................... [RUN]
+[0m13:44:26.102736 [debug] [Thread-2 (]: On test.ecommerce_dbt.unique_stg_products_product_id.7d950a1467: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "test.ecommerce_dbt.unique_stg_products_product_id.7d950a1467"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    product_id as unique_field,
+    count(*) as n_records
+
+from "ecommerce_db"."dbt_dev_staging"."stg_products"
+where product_id is not null
+group by product_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m13:44:26.103940 [debug] [Thread-4 (]: On test.ecommerce_dbt.not_null_stg_users_user_id.980dfc1b77: ROLLBACK
+[0m13:44:26.105822 [debug] [Thread-3 (]: On test.ecommerce_dbt.unique_stg_clickstream_event_id.2fed12c0a9: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "test.ecommerce_dbt.unique_stg_clickstream_event_id.2fed12c0a9"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    event_id as unique_field,
+    count(*) as n_records
+
+from "ecommerce_db"."dbt_dev_staging"."stg_clickstream"
+where event_id is not null
+group by event_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m13:44:26.108855 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ecommerce_dbt.not_null_stg_users_email.2723c62e0e, now test.ecommerce_dbt.unique_stg_users_email.7ba574d07b)
+[0m13:44:26.111079 [debug] [Thread-4 (]: On test.ecommerce_dbt.not_null_stg_users_user_id.980dfc1b77: Close
+[0m13:44:26.112730 [debug] [Thread-1 (]: Began compiling node test.ecommerce_dbt.unique_stg_users_email.7ba574d07b
+[0m13:44:26.113369 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m13:44:26.116733 [info ] [Thread-4 (]: 14 of 18 PASS not_null_stg_users_user_id ....................................... [[32mPASS[0m in 0.14s]
+[0m13:44:26.122561 [debug] [Thread-1 (]: Writing injected SQL for node "test.ecommerce_dbt.unique_stg_users_email.7ba574d07b"
+[0m13:44:26.125237 [debug] [Thread-2 (]: Timing info for test.ecommerce_dbt.unique_stg_products_product_id.7d950a1467 (execute): 13:44:26.056288 => 13:44:26.124970
+[0m13:44:26.126593 [debug] [Thread-4 (]: Finished running node test.ecommerce_dbt.not_null_stg_users_user_id.980dfc1b77
+[0m13:44:26.129751 [debug] [Thread-2 (]: On test.ecommerce_dbt.unique_stg_products_product_id.7d950a1467: ROLLBACK
+[0m13:44:26.131242 [debug] [Thread-4 (]: Began running node test.ecommerce_dbt.unique_stg_users_user_id.c2ff477e6b
+[0m13:44:26.132720 [debug] [Thread-2 (]: On test.ecommerce_dbt.unique_stg_products_product_id.7d950a1467: Close
+[0m13:44:26.133387 [info ] [Thread-4 (]: 18 of 18 START test unique_stg_users_user_id ................................... [RUN]
+[0m13:44:26.136116 [info ] [Thread-2 (]: 16 of 18 PASS unique_stg_products_product_id ................................... [[32mPASS[0m in 0.12s]
+[0m13:44:26.139986 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ecommerce_dbt.not_null_stg_users_user_id.980dfc1b77, now test.ecommerce_dbt.unique_stg_users_user_id.c2ff477e6b)
+[0m13:44:26.141523 [debug] [Thread-2 (]: Finished running node test.ecommerce_dbt.unique_stg_products_product_id.7d950a1467
+[0m13:44:26.142806 [debug] [Thread-4 (]: Began compiling node test.ecommerce_dbt.unique_stg_users_user_id.c2ff477e6b
+[0m13:44:26.144373 [debug] [Thread-1 (]: Timing info for test.ecommerce_dbt.unique_stg_users_email.7ba574d07b (compile): 13:44:26.117983 => 13:44:26.144120
+[0m13:44:26.150138 [debug] [Thread-4 (]: Writing injected SQL for node "test.ecommerce_dbt.unique_stg_users_user_id.c2ff477e6b"
+[0m13:44:26.152028 [debug] [Thread-1 (]: Began executing node test.ecommerce_dbt.unique_stg_users_email.7ba574d07b
+[0m13:44:26.157203 [debug] [Thread-1 (]: Writing runtime sql for node "test.ecommerce_dbt.unique_stg_users_email.7ba574d07b"
+[0m13:44:26.165731 [debug] [Thread-4 (]: Timing info for test.ecommerce_dbt.unique_stg_users_user_id.c2ff477e6b (compile): 13:44:26.145146 => 13:44:26.165201
+[0m13:44:26.167184 [debug] [Thread-4 (]: Began executing node test.ecommerce_dbt.unique_stg_users_user_id.c2ff477e6b
+[0m13:44:26.171088 [debug] [Thread-4 (]: Writing runtime sql for node "test.ecommerce_dbt.unique_stg_users_user_id.c2ff477e6b"
+[0m13:44:26.171802 [debug] [Thread-1 (]: Using postgres connection "test.ecommerce_dbt.unique_stg_users_email.7ba574d07b"
+[0m13:44:26.173843 [debug] [Thread-1 (]: On test.ecommerce_dbt.unique_stg_users_email.7ba574d07b: BEGIN
+[0m13:44:26.175086 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:44:26.184226 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:26.185401 [debug] [Thread-4 (]: Using postgres connection "test.ecommerce_dbt.unique_stg_users_user_id.c2ff477e6b"
+[0m13:44:26.185815 [debug] [Thread-1 (]: Using postgres connection "test.ecommerce_dbt.unique_stg_users_email.7ba574d07b"
+[0m13:44:26.186979 [debug] [Thread-4 (]: On test.ecommerce_dbt.unique_stg_users_user_id.c2ff477e6b: BEGIN
+[0m13:44:26.188169 [debug] [Thread-1 (]: On test.ecommerce_dbt.unique_stg_users_email.7ba574d07b: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "test.ecommerce_dbt.unique_stg_users_email.7ba574d07b"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    email as unique_field,
+    count(*) as n_records
+
+from "ecommerce_db"."dbt_dev_staging"."stg_users"
+where email is not null
+group by email
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m13:44:26.189312 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m13:44:26.195190 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m13:44:26.197892 [debug] [Thread-1 (]: Timing info for test.ecommerce_dbt.unique_stg_users_email.7ba574d07b (execute): 13:44:26.154011 => 13:44:26.197572
+[0m13:44:26.199259 [debug] [Thread-1 (]: On test.ecommerce_dbt.unique_stg_users_email.7ba574d07b: ROLLBACK
+[0m13:44:26.200575 [debug] [Thread-4 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:26.201306 [debug] [Thread-1 (]: On test.ecommerce_dbt.unique_stg_users_email.7ba574d07b: Close
+[0m13:44:26.202398 [debug] [Thread-4 (]: Using postgres connection "test.ecommerce_dbt.unique_stg_users_user_id.c2ff477e6b"
+[0m13:44:26.204750 [info ] [Thread-1 (]: 17 of 18 PASS unique_stg_users_email ........................................... [[32mPASS[0m in 0.10s]
+[0m13:44:26.206117 [debug] [Thread-4 (]: On test.ecommerce_dbt.unique_stg_users_user_id.c2ff477e6b: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_dbt", "target_name": "dev", "node_id": "test.ecommerce_dbt.unique_stg_users_user_id.c2ff477e6b"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    user_id as unique_field,
+    count(*) as n_records
+
+from "ecommerce_db"."dbt_dev_staging"."stg_users"
+where user_id is not null
+group by user_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m13:44:26.207739 [debug] [Thread-1 (]: Finished running node test.ecommerce_dbt.unique_stg_users_email.7ba574d07b
+[0m13:44:26.212542 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m13:44:26.216170 [debug] [Thread-4 (]: Timing info for test.ecommerce_dbt.unique_stg_users_user_id.c2ff477e6b (execute): 13:44:26.168432 => 13:44:26.215547
+[0m13:44:26.217602 [debug] [Thread-4 (]: On test.ecommerce_dbt.unique_stg_users_user_id.c2ff477e6b: ROLLBACK
+[0m13:44:26.219247 [debug] [Thread-4 (]: On test.ecommerce_dbt.unique_stg_users_user_id.c2ff477e6b: Close
+[0m13:44:26.221403 [info ] [Thread-4 (]: 18 of 18 PASS unique_stg_users_user_id ......................................... [[32mPASS[0m in 0.08s]
+[0m13:44:26.223566 [debug] [Thread-4 (]: Finished running node test.ecommerce_dbt.unique_stg_users_user_id.c2ff477e6b
+[0m13:44:26.270450 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m13:44:26.273463 [debug] [Thread-3 (]: Timing info for test.ecommerce_dbt.unique_stg_clickstream_event_id.2fed12c0a9 (execute): 13:44:26.064599 => 13:44:26.273233
+[0m13:44:26.274518 [debug] [Thread-3 (]: On test.ecommerce_dbt.unique_stg_clickstream_event_id.2fed12c0a9: ROLLBACK
+[0m13:44:26.275806 [debug] [Thread-3 (]: On test.ecommerce_dbt.unique_stg_clickstream_event_id.2fed12c0a9: Close
+[0m13:44:26.278286 [info ] [Thread-3 (]: 15 of 18 PASS unique_stg_clickstream_event_id .................................. [[32mPASS[0m in 0.26s]
+[0m13:44:26.280304 [debug] [Thread-3 (]: Finished running node test.ecommerce_dbt.unique_stg_clickstream_event_id.2fed12c0a9
+[0m13:44:26.283514 [debug] [MainThread]: Using postgres connection "master"
+[0m13:44:26.284438 [debug] [MainThread]: On master: BEGIN
+[0m13:44:26.285308 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:44:26.291450 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m13:44:26.292562 [debug] [MainThread]: On master: COMMIT
+[0m13:44:26.293933 [debug] [MainThread]: Using postgres connection "master"
+[0m13:44:26.295055 [debug] [MainThread]: On master: COMMIT
+[0m13:44:26.296795 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m13:44:26.298112 [debug] [MainThread]: On master: Close
+[0m13:44:26.299907 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:44:26.301727 [debug] [MainThread]: Connection 'test.ecommerce_dbt.unique_stg_clickstream_event_id.2fed12c0a9' was properly closed.
+[0m13:44:26.304099 [debug] [MainThread]: Connection 'test.ecommerce_dbt.unique_stg_products_product_id.7d950a1467' was properly closed.
+[0m13:44:26.304839 [debug] [MainThread]: Connection 'test.ecommerce_dbt.unique_stg_users_email.7ba574d07b' was properly closed.
+[0m13:44:26.305575 [debug] [MainThread]: Connection 'test.ecommerce_dbt.unique_stg_users_user_id.c2ff477e6b' was properly closed.
+[0m13:44:26.306429 [info ] [MainThread]: 
+[0m13:44:26.307488 [info ] [MainThread]: Finished running 18 tests in 0 hours 0 minutes and 0.95 seconds (0.95s).
+[0m13:44:26.310574 [debug] [MainThread]: Command end result
+[0m13:44:26.337558 [info ] [MainThread]: 
+[0m13:44:26.338827 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:44:26.340244 [info ] [MainThread]: 
+[0m13:44:26.341206 [info ] [MainThread]: Done. PASS=18 WARN=0 ERROR=0 SKIP=0 TOTAL=18
+[0m13:44:26.343363 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 1.5167046, "process_user_time": 1.942651, "process_kernel_time": 0.291603, "process_mem_max_rss": "109564", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m13:44:26.345154 [debug] [MainThread]: Command `dbt test` succeeded at 13:44:26.344915 after 1.52 seconds
+[0m13:44:26.346363 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74fe99d87340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74fe97a6cc40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74fe960912d0>]}
+[0m13:44:26.347269 [debug] [MainThread]: Flushing usage events
