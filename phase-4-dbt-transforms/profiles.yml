@@ -1,0 +1,16 @@
+# dbt connection profile
+# This file tells dbt HOW to connect to your database
+# Think of it as your .env file for dbt
+
+ecommerce_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: postgres          # Docker service name
+      port: 5432              # internal Docker port
+      dbname: ecommerce_db
+      user: deuser
+      password: depass
+      schema: dbt_dev         # dbt creates its own schema
+      threads: 4              # parallel model runs

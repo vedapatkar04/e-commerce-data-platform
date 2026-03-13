@@ -1,0 +1,11 @@
+
+    
+    
+
+
+
+select product_id
+from "ecommerce_db"."dbt_dev_marts"."mart_top_products"
+where product_id is null
+
+

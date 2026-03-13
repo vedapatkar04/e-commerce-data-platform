@@ -99,6 +99,19 @@ services:
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:29092
 
 
+  # dbt — SQL transformation layer
+  dbt:
+    image: ghcr.io/dbt-labs/dbt-postgres:1.7.0
+    container_name: ecommerce_dbt
+    volumes:
+      - ./phase-4-dbt-transforms/ecommerce_dbt:/usr/app/dbt
+      - ./phase-4-dbt-transforms/profiles.yml:/root/.dbt/profiles.yml
+    working_dir: /usr/app/dbt
+    depends_on:
+      postgres:
+        condition: service_healthy
+    entrypoint: ["tail", "-f", "/dev/null"]
+
   # Airflow common config
   x-airflow-common: &airflow-common
     image: apache/airflow:2.8.1
@@ -178,3 +191,5 @@ volumes:
   postgres_data:
   airflow_logs:
   pgadmin_data:
+
+

@@ -1,0 +1,30 @@
+# dbt Project Configuration
+# File: phase-4-dbt-transforms/ecommerce_dbt/dbt_project.yml
+
+name: ecommerce_dbt
+version: '1.0.0'
+config-version: 2
+
+profile: ecommerce_dbt       # matches profiles.yml
+
+# Directory structure
+model-paths: ["models"]
+test-paths: ["tests"]
+analysis-paths: ["analyses"]
+macro-paths: ["macros"]
+
+# Model materialization defaults
+# materialized: view   = dbt creates a SQL view (no data stored, fast)
+# materialized: table  = dbt creates a real table (data stored, slower but queryable)
+# materialized: incremental = only process new rows (most efficient for large data)
+models:
+  ecommerce_dbt:
+    staging:
+      +materialized: view       # staging = views (lightweight, always fresh)
+      +schema: staging
+    intermediate:
+      +materialized: view       # intermediate = views
+      +schema: intermediate
+    marts:
+      +materialized: table      # marts = tables (fast to query for dashboards)
+      +schema: marts
