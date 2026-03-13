@@ -43,6 +43,62 @@ services:
     ports:
       - "6379:6379"
 
+  # Zookeeper — required by Kafka
+  # Manages Kafka broker metadata and coordination
+  # Think of it as the cluster manager
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.5.0
+    container_name: ecommerce_zookeeper
+    restart: unless-stopped
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - "2181:2181"
+
+    
+    # Kafka Broker
+    # The actual message streaming service
+  kafka:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: ecommerce_kafka
+    restart: unless-stopped
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"       # external access (your Python scripts)
+      - "29092:29092"     # internal Docker network access
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      # Two listeners:
+      # PLAINTEXT       → for containers inside Docker network
+      # PLAINTEXT_HOST  → for connections from your machine (Python scripts)
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+    healthcheck:
+      test: ["CMD", "kafka-broker-api-versions", "--bootstrap-server", "localhost:9092"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+ 
+  # Kafka UI — visual topic/message browser
+  # Like pgAdmin but for Kafka
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: ecommerce_kafka_ui
+    restart: unless-stopped
+    depends_on:
+      - kafka
+    ports:
+      - "8090:8080"       # use 8090 to avoid conflict with Airflow on 8080
+    environment:
+      KAFKA_CLUSTERS_0_NAME: ecommerce
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:29092
+
+
   # Airflow common config
   x-airflow-common: &airflow-common
     image: apache/airflow:2.8.1
